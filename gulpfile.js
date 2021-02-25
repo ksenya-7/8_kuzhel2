@@ -16,14 +16,7 @@ const webpackConfig = require('./webpack.config.js');
 const fileinclude = require('gulp-file-include');
 
 const html = () => {
-  return gulp.src(['source/html/*.html'])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@root',
-      context: { // глобальные переменные для include
-        test: 'text'
-      }
-    }))
+  return gulp.src(['source/*.html'])
     .pipe(gulp.dest('build'));
 };
 
