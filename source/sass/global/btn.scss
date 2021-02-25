@@ -1,0 +1,32 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 288px;
+  min-height: 50px;
+  // padding-top: 1px;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-fonbasic;
+
+  background-color: $color-main;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-mainhover;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-mainhover;
+    outline: none;
+  }
+}

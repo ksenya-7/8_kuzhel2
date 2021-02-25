@@ -1,0 +1,27 @@
+// .container {
+//   outline: 5px solid rgba(183, 0, 255, 0.8);
+//   outline-offset: -5px;
+
+//   width: 100%;
+//   min-width: $mobile-width;
+//   width: $desktop-width;
+//   // max-width: $max-width;
+//   padding: 0 $padding-max;
+//   margin: 0 auto;
+
+//   &--no-padding {
+//     padding: 0;
+//   }
+
+//   @include viewport--lg {
+//     padding: 0 $padding-max;
+//   }
+
+//   @include viewport--md {
+//     padding: 0 $padding-tablet;
+//   }
+
+//   @include viewport--sm {
+//       padding: 0 $padding-min;
+//   }
+// }
