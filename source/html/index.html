@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="Description"
+      content="Печатные платы – производство и монтаж, поставка комплектующих, блоков и модулей"
+    />
+    <title>Smart Device</title>
+    <link
+      rel="preload"
+      href="fonts/PTMono-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Roboto-500.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/RobotoCondensed-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/RobotoCondensed-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div style="display: none">@@include("build/img/sprite_auto.svg")</div>
+
+      <header class="main-header">
+        <h1 class="visually-hidden">Интернет-магазин Smart Device</h1>
+        <div class="main-header__wrapper main-header__wrapper--desktop">
+          <!-- 1х: 1920px; 2x: 3840px -->
+          <img
+            width="1920"
+            height="878"
+            src="img/content/desktop_main-bg_1x.png"
+            srcset="img/content/desktop_main-bg_2x.png 2x"
+            alt="фон раздела"
+          />
+
+          <div class="main-header__top">
+            <a class="main-header__logo">
+              <svg width="52" height="52" viewBox="0 0 52 52">
+                <use xlink:href="#logo"></use>
+              </svg>
+              <div class="main-header__logo-text">
+                <h3>Smart Device</h3>
+                <p class="main-header__optionaltext">умные технологии</p>
+              </div>
+            </a>
+            <ul class="main-header__list">
+              <li class="main-header__item">
+                <a
+                  href="mailto:info@sd.ru"
+                  class="main-header__link"
+                  aria-label="электронная почта компании"
+                >
+                  <span class="main-header__icon main-header__icon--mail">
+                    <svg width="19" height="14" viewBox="0 0 19 14">
+                      <use xlink:href="#icon_envelope"></use>
+                    </svg>
+                  </span>
+                  <span class="main-header__text main-header__text--mail"
+                    >info@sd.ru</span
+                  >
+                </a>
+              </li>
+              <li class="main-header__item">
+                <a
+                  href="tel:+74950005252"
+                  class="main-header__link"
+                  aria-label="телефон компании"
+                >
+                  <span class="main-header__icon main-header__icon--phone">
+                    <svg width="17" height="17" viewBox="0 0 17 17">
+                      <use xlink:href="#icon_phone-call"></use>
+                    </svg>
+                  </span>
+                  <span class="main-header__text main-header__text--phone"
+                    >+7 (495) 000 52 52</span
+                  >
+                </a>
+              </li>
+            </ul>
+            <button type="button" class="main-header__button btn">
+              Заказать звонок
+            </button>
+          </div>
+
+          <div class="main-header__bottom">
+            <div class="main-header__intro">
+              <h2>Печатные платы</h2>
+              <p class="main-header__introtext">
+                производство и монтаж, поставка комплектующих, блоков и модулей
+              </p>
+              <a
+                href="#form"
+                class="main-header__scroll-to-form"
+                aria-label="скролл к форме"
+              >
+                Получить бесплатную консультацию
+              </a>
+              <a
+                href="#footer"
+                class="main-header__scroll-to-features"
+                aria-label="Скролл к следующему разделу"
+                >Скролл вниз</a
+              >
+            </div>
+
+            <div class="main-header__photo main-header__photo--desktop">
+              <!-- 1х: 705px; 2x: 1410px -->
+              <img
+                width="705"
+                height="515"
+                src="img/content/desktop_devices_1x.png"
+                srcset="img/content/desktop_devices_2x.png 2x"
+                alt="Печатные платы"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="main-header__wrapper main-header__wrapper--tablet">
+          <!-- 1х: 768px; 2x: 1536px -->
+          <img
+            width="768"
+            height="686"
+            src="img/content/tablet_main-bg_1x.png"
+            srcset="img/content/tablet_main-bg_2x.png 2x"
+            alt="фон раздела"
+          />
+
+          <div class="main-header__top">
+            <a class="main-header__logo">
+              <svg width="52" height="52" viewBox="0 0 52 52">
+                <use xlink:href="#logo"></use>
+              </svg>
+              <div class="main-header__logo-text">
+                <h3>Smart Device</h3>
+                <p class="main-header__optionaltext">умные технологии</p>
+              </div>
+            </a>
+            <ul class="main-header__list">
+              <li class="main-header__item">
+                <a
+                  href="mailto:info@sd.ru"
+                  class="main-header__link"
+                  aria-label="электронная почта компании"
+                >
+                  <span class="main-header__icon main-header__icon--mail">
+                    <svg width="19" height="14">
+                      <use xlink:href="#icon_envelope"></use>
+                    </svg>
+                  </span>
+                  <span class="main-header__text main-header__text--mail"
+                    >info@sd.ru</span
+                  >
+                </a>
+              </li>
+              <li class="main-header__item">
+                <a
+                  href="tel:+74950005252"
+                  class="main-header__link"
+                  aria-label="телефон компании"
+                >
+                  <span class="main-header__icon main-header__icon--phone">
+                    <svg width="17" height="17">
+                      <use xlink:href="#icon_phone-call"></use>
+                    </svg>
+                  </span>
+                  <span class="main-header__text main-header__text--phone"
+                    >+7 (495) 000 52 52</span
+                  >
+                </a>
+              </li>
+            </ul>
+            <button type="button" class="main-header__button btn">
+              Заказать звонок
+            </button>
+          </div>
+
+          <div class="main-header__bottom">
+            <div class="main-header__intro">
+              <h2>Печатные платы</h2>
+              <p class="main-header__introtext">
+                производство и монтаж, поставка комплектующих, блоков и модулей
+              </p>
+              <a
+                href="#form"
+                class="main-header__scroll-to-form"
+                aria-label="скролл к форме"
+              >
+                Получить бесплатную консультацию
+              </a>
+              <a
+                href="#footer"
+                class="main-header__scroll-to-features"
+                aria-label="Скролл к следующему разделу"
+                >Скролл вниз</a
+              >
+            </div>
+
+            <div class="main-header__photo main-header__photo--tablet">
+              <!-- 1х: 260px; 2x: 520px -->
+              <img
+                width="260"
+                height="340"
+                src="img/content/tablet_devices_1x.png"
+                srcset="img/content/tablet_devices_2x.png 2x"
+                alt="Печатные платы"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="main-header__wrapper main-header__wrapper--mobile">
+          <!-- 1х: 320px; 2x: 640px -->
+          <img
+            width="320"
+            height="646"
+            src="img/content/mobile_main-bg_1x.png"
+            srcset="img/content/mobile_main-bg_2x.png 2x"
+            alt="фон раздела"
+          />
+
+          <div class="main-header__top">
+            <a class="main-header__logo">
+              <svg width="52" height="52" viewBox="0 0 52 52">
+                <use xlink:href="#logo"></use>
+              </svg>
+              <div class="main-header__logo-text">
+                <h3>Smart Device</h3>
+                <p class="main-header__optionaltext">умные технологии</p>
+              </div>
+            </a>
+            <ul class="main-header__list">
+              <li class="main-header__item">
+                <a
+                  href="mailto:info@sd.ru"
+                  class="main-header__link"
+                  aria-label="электронная почта компании"
+                >
+                  <span class="main-header__icon main-header__icon--mail">
+                    <svg width="19" height="14">
+                      <use xlink:href="#icon_envelope"></use>
+                    </svg>
+                  </span>
+                  <span class="main-header__text main-header__text--mail"
+                    >info@sd.ru</span
+                  >
+                </a>
+              </li>
+              <li class="main-header__item">
+                <a
+                  href="tel:+74950005252"
+                  class="main-header__link"
+                  aria-label="телефон компании"
+                >
+                  <span class="main-header__icon main-header__icon--phone">
+                    <svg width="17" height="17">
+                      <use xlink:href="#icon_phone-call"></use>
+                    </svg>
+                  </span>
+                  <span class="main-header__text main-header__text--phone"
+                    >+7 (495) 000 52 52</span
+                  >
+                </a>
+              </li>
+            </ul>
+            <button type="button" class="main-header__button btn">
+              Заказать звонок
+            </button>
+          </div>
+
+          <div class="main-header__bottom">
+            <div class="main-header__photo main-header__photo--mobile">
+              <!-- 1х: 294px; 2x: 588px -->
+              <img
+                width="294"
+                height="220"
+                src="img/content/mobile_devices_1x.png"
+                srcset="img/content/mobile_devices_2x.png 2x"
+                alt="Печатные платы"
+              />
+            </div>
+            <div class="main-header__intro">
+              <h2>Печатные платы</h2>
+              <p class="main-header__introtext">
+                производство и монтаж, поставка комплектующих, блоков и модулей
+              </p>
+              <a
+                href="#form"
+                class="main-header__scroll-to-form"
+                aria-label="скролл к форме"
+              >
+                Бесплатная консультация
+              </a>
+              <a
+                href="#footer"
+                class="main-header__scroll-to-features"
+                aria-label="Скролл к следующему разделу"
+                >Скролл вниз</a
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- <main class="main">
+
+
+        <section id="features" class="features">
+          <h2></h2>
+          <ul class="features__list">
+            <li class="features__item">
+              <span></span>
+              <p></p>
+            </li>
+
+          </ul>
+        </section>
+
+        <form
+            action="https://echo.htmlacademy.ru"
+            method="post"
+            autocomplete="off"
+          >
+            <div class="main-header__form">
+              <p></p>
+
+              <ul class="main-header__list">
+                <li class="main-header__item">
+                  класс js-invalid делает border красным
+      <input
+                    id="user-name"
+                    type="text"
+                    name="user-name"
+                    placeholder="Введите Ваше Имя"
+                    minlength="3"
+                    aria-label="поле для ввода имени пользователя"
+                    required
+                  />
+                </li>
+                <li class="main-header__item"> -->
+      <!-- класс js-invalid делает border красным -->
+      <!-- <input
+                    data-type="tel"
+                    id="user-tel"
+                    type="tel"
+                    name="user-tel"
+                    placeholder="Введите Ваш номер телефона"
+                    aria-label="поле для ввода телефона пользователя"
+                    required
+                  />
+                </li>
+              </ul>
+              <button
+                class="btn main-header__button"
+                type="submit"
+                aria-label="отправить контактные данные"
+              ></button>
+            </div> -->
+      <!-- </div> -->
+      <!-- </main>
+
+
+      <footer id="contacts" class="contacts">
+        <h2></h2>
+        <p></p>
+        <div class="contacts__map"></div>
+        <ul class="contacts__list">
+          <li>
+            <a
+              class="contacts__email"
+              href="mailto:puteshestviemechta@gmail.ru"
+              aria-label="электронная почта компании"
+            >
+              <svg width="26" height="20">
+                <use xlink:href="#icon_mail"></use>
+              </svg>
+
+              <span> puteshestviemechta@gmail.ru </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="contacts__telvalue"
+              href="tel:+749978465446"
+              aria-label="телефон компании"
+            >
+              <svg width="22" height="24">
+                <use xlink:href="#icon_tel"></use>
+              </svg>
+
+              +7 (499) -784-684-46
+            </a>
+          </li>
+        </ul>
+      </footer> -->
+    </div>
+    <!-- <script src="js/script.js"></script> -->
+  </body>
+</html>

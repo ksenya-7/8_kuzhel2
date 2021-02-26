@@ -3,30 +3,26 @@
   align-items: center;
   justify-content: center;
 
-  min-width: 288px;
-  min-height: 50px;
-  // padding-top: 1px;
+  width: 180px;
+  min-height: 45px;
+  padding: 12px;
 
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 2px;
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
   text-align: center;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: $color-fonbasic;
 
-  background-color: $color-main;
-  border: none;
+  border-radius: 5px;
+  background-color: transparent;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: $color-mainhover;
     outline: none;
-  }
-
-  &:active {
-    background-color: $color-mainhover;
-    outline: none;
+    opacity: 0.5;
   }
 }
