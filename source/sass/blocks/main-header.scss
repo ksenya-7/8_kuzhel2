@@ -9,7 +9,7 @@
     min-height: 686px;
   }
 
-  @include viewport--lg {
+  @include viewport--md {
     min-height: 646px;
   }
 }
@@ -50,7 +50,7 @@
     min-height: 686px;
   }
 
-  @include viewport--lg {
+  @include viewport--md {
     min-height: 646px;
   }
 }

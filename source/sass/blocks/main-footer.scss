@@ -2,18 +2,47 @@
   align-self: flex-end;
   display: flex;
   flex-direction: column;
-  outline: 3px solid rgba(17, 0, 255, 0.8);
-  outline-offset: -3px;
+  position: relative;
+  // outline: 3px solid rgba(17, 0, 255, 0.8);
+  // outline-offset: -3px;
 
   width: 100%;
   min-height: 316px;
+  padding-bottom: 14px;
 
   @include viewport--lg {
     min-height: 457px;
+    padding-bottom: 24px;
   }
 
-  @include viewport--lg {
+  @include viewport--md {
     min-height: 685px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 52px;
+    width: 100%;
+    height: 1px;
+    background-color: $color-line;
+
+    @include viewport--lg {
+      bottom: 70px;
+    }
+  }
+
+    &::before {
+    @include viewport--lg {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 96px;
+      width: 100%;
+      height: 1px;
+      background-color: $color-line;
+    }
   }
 }
 
@@ -23,17 +52,42 @@
   width: 73.5%;
   margin: 65px 13.33% 0 13.18%;
 
-  // @include viewport--lg {
-  //   min-height: 686px;
-  // }
+  @include viewport--xl {
+    width: 93.88%;
+    margin: 65px 3.13% 0 2.99%;
+  }
 
-  // @include viewport--lg {
-  //   min-height: 646px;
+  @include viewport--lg {
+    width: 93.8%;
+    margin: 17px 3% 0 3.2%;
+  }
+
+  // @include viewport--md {
+  //   width: 90%;
+  //   margin: 15px 4.69% 0 5.31%;
   // }
 }
 
 .main-footer__extrawrapper {
   display: flex;
+
+  @include viewport--lg {
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.main-footer__header {
+  display: flex;
+  flex-direction: column;
+  min-width: 216px;
+
+  @include viewport--lg {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .main-footer__logo {
@@ -74,10 +128,10 @@
   color: $color-optional;
 }
 
-.main-footer__header {
-  display: flex;
-  flex-direction: column;
-  min-width: 216px;
+.main-footer__all-right {
+  @include viewport--lg {
+    display: none;
+  }
 }
 
 .header-footer__header-list {
@@ -88,6 +142,25 @@
   margin: 0;
   margin-top: 54px;
   padding: 0;
+
+  @include viewport--lg {
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
+.main-footer__site-section--desktop {
+  @include viewport--lg {
+    display: none;
+  }
+}
+
+.main-footer__site-section--tablet {
+  display: none;
+
+  @include viewport--lg {
+    display: block;
+  }
 }
 
 .header-footer__header-item {
@@ -101,6 +174,12 @@
 .main-footer__site-section {
   max-width: 551px;
   margin-left: 14.6%;
+
+  @include viewport--lg {
+    max-width: 243px;
+    margin-top: 65px;
+    margin-left: 2px;
+  }
 }
 
 .main-footer__site-section h2,
@@ -129,6 +208,10 @@
   line-height: 25px;
   color: $color-title;
   opacity: 0.5;
+
+  @include viewport--lg {
+    margin-top: 24px;
+  }
 }
 
 .main-footer__site-item {
@@ -142,12 +225,29 @@
 
 .main-footer__address-section {
   max-width: 333px;
-  margin-left: 7.45%;
+  margin-left: auto;
+
+  @include viewport--xxl {
+    min-width: 333px;
+  }
+
+  @include viewport--xl {
+    min-width: 332px;
+  }
+
+  @include viewport--lg {
+    min-width: 345px;
+    margin-top: 65px;
+  }
 }
 
 .main-footer__address-block {
   width: 100%;
   margin-top: 29px;
+
+  @include viewport--lg {
+    margin-top: 24px;
+  }
 }
 
 .main-footer__address-block p {
@@ -160,6 +260,7 @@
 }
 
 .main-footer__right-section {
+  display: flex;
   width: 100%;
   margin-top: 69px;
 
@@ -169,14 +270,49 @@
   text-transform: uppercase;
   color: $color-title;
   opacity: 0.5;
+
+  @include viewport--lg {
+    margin-top: 59px;
+  }
 }
 
-.main-footer__all-right {
-  margin-right: 3.47%;
-}
 .main-footer__service {
-  margin-right: 10.05%;
+  margin-left: 3.47%;
+
+  @include viewport--lg {
+    margin-left: 0;
+  }
 }
+
 .main-footer__conditions {
-  margin-right: 28.61%;
+  margin-left: 10.05%;
+
+  @include viewport--lg {
+    margin-left: 3px;
+  }
+}
+
+.main-footer__studio {
+  margin-left: auto;
+}
+
+.main-footer__service--tablet {
+  display: none;
+
+  @include viewport--lg {
+    display: block;
+    margin-left: 12.06%;
+    margin-top: 5px;
+
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
+
+.main-footer__service--desktop {
+  @include viewport--lg {
+    display: none;
+  }
 }
