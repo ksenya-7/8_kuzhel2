@@ -1,8 +1,8 @@
 import {ieFix} from './utils/ie-fix';
 import {iosVhFix} from './utils/ios-vh-fix';
 
-import {initNav} from './modules/script';
-import {initModals} from './modules/script';
+import {initAccordion} from './modules/accordion';
+// import {initModals} from './modules/script';
 
 // Utils
 // ---------------------------------
@@ -13,5 +13,4 @@ iosVhFix();
 // Modules
 // ---------------------------------
 
-initNav();
-initModals();
+initAccordion();
