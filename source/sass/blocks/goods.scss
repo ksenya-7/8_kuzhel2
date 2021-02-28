@@ -1,0 +1,74 @@
+.goods {
+  width: 100%;
+  min-height: 938px;
+  display: flex;
+  flex-direction: column;
+  padding: 89px 19.53% 127px 19.53%;
+  background-color: $color-background;
+
+  @include viewport--xl {
+    padding: 89px 11% 127px 11%;
+  }
+}
+
+.goods h2 {
+  margin: 0;
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  color: $color-fonbasic;
+}
+
+.goods__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+}
+
+.goods__item {
+  position: relative;
+  width: 31.62%;
+  margin: 0;
+  margin-right: 2.56%;
+  padding: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 63px;
+    height: 63px;
+    background-color: $color-stroke;
+    background-image: url("../img/svg/arrow_right.svg");
+    background-size: 10%;
+    background-position: 53% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.goods__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.goods__item h3 {
+  position: absolute;
+  top: 53px;
+  left: 44px;
+  width: 45%;
+  margin: 0;
+  margin-right: 2.56%;
+  padding: 0;
+
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: $color-fonbasic;
+}
