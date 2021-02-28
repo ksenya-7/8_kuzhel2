@@ -1,0 +1,259 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+
+  width: 77.81%;
+  margin: 173px 9.22% auto 12.97%;
+  padding-bottom: 70px;
+
+  @include viewport--xl {
+    width: 93.75%;
+    margin: 173px 2.91% auto 4.09%;
+  }
+
+  @include viewport--lg {
+    width: 88.8%;
+    margin: 41px 0 auto 11.4%;
+  }
+
+  @include viewport--md {
+    flex-direction: column;
+    width: 95.31%;
+    margin: 37px 0 auto 4.69%;
+  }
+}
+
+.intro__block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+  z-index: 2;
+
+  color: $color-fonbasic;
+
+  @include viewport--lg {
+    margin-top: 75px;
+  }
+
+  @include viewport--md {
+    margin-top: -26px;
+  }
+}
+
+.intro__block h2 {
+  margin: 0;
+  font-family: $font-title;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  @include viewport--xxl {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @include viewport--lg {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @include viewport--md {
+    max-width: 277px;
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+
+.intro__block p {
+  position: relative;
+  margin: 0;
+  max-width: 683px;
+  margin-top: 30px;
+  margin-left: 98px;
+  font-size: 22px;
+  line-height: 34px;
+
+  @include viewport--xl {
+    max-width: 570px;
+    margin-left: 51px;
+
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @include viewport--lg {
+    max-width: 356px;
+    margin-left: 51px;
+
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @include viewport--md {
+    max-width: 245px;
+    margin-top: 28px;
+    margin-left: 51px;
+
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -94px;
+    top: 16px;
+    width: 66px;
+    height: 2px;
+    background-color: $color-fonbasic;
+
+    @include viewport--xl {
+      left: -48px;
+      width: 33px;
+      top: 15px;
+    }
+
+    @include viewport--lg {
+      left: -48px;
+      width: 33px;
+      top: 15px;
+    }
+  }
+}
+
+.intro__photo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.intro__photo--desktop {
+  @include viewport--lg {
+    display: none;
+  }
+}
+
+.intro__photo--desktop img {
+  width: 705px;
+  max-width: 705px;
+  height: 515px;
+  min-height: 515px;
+  position: relative;
+  z-index: 1;
+}
+
+.intro__photo--tablet {
+  display: none;
+
+  @include viewport--lg {
+    margin-left: -10px;
+    display: block;
+  }
+
+  @include viewport--md {
+    display: none;
+  }
+}
+
+.intro__photo--mobile {
+  display: none;
+
+  @include viewport--md {
+    display: flex;
+  }
+}
+
+.intro__photo--tablet img {
+  width: 260px;
+  max-width: 330px;
+  height: 340px;
+  min-height: 340px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.intro__photo--mobile img {
+  width: 294px;
+  max-width: 294px;
+  height: 220px;
+  min-height: 220px;
+  margin-right: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.intro__scroll-to-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 407px;
+  min-height: 55px;
+  margin-top: 43px;
+  margin-left: 98px;
+  padding: 12px 28px 14px;
+
+  background: $color-stroke;
+  border-radius: 5px;
+
+  font-family: $font-title;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+    transition-duration: $time-transition;
+  }
+
+  @include viewport--xl {
+    margin-left: 51px;
+  }
+
+  @include viewport--lg {
+    width: 379px;
+    margin-top: 55px;
+    margin-left: 51px;
+    padding: 12px 14px 14px;
+  }
+
+  @include viewport--md {
+    width: 287px;
+
+    margin-top: 40px;
+    margin-left: 3px;
+    padding: 12px 11px 14px;
+  }
+}
+
+.intro__scroll-to-features {
+  margin-left: -35px;
+  margin-top: 130px;
+  width: 93px;
+  transform: rotate(270deg);
+  font-size: 14px;
+  line-height: 16px;
+
+  opacity: 0.5;
+
+  @include viewport--lg {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 1;
+    transition-duration: $time-transition;
+  }
+}

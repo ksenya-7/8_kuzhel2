@@ -1,0 +1,12 @@
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+    transition-duration: $time-transition;
+  }
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

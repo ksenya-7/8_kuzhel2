@@ -8,10 +8,9 @@ $viewport--xxl: 1800px;
 
 // $content--xl: 1170px;
 
-// $padding-min: 16px;
-// $padding-max: 50px;
-// $padding-tablet: 21px;
-// $padding-desktop: 375px;
+//timing
+//-----------
+$time-transition: 0.5s;
 
 //fonts
 //-----------
@@ -26,6 +25,7 @@ $color-text: rgb(102, 102, 102);
 $color-line: rgba(98, 105, 98, 0.2);
 $color-title: rgb(32, 60, 66);
 $color-stroke: rgb(0, 178, 255);
+$color-border:  rgb(235, 235, 235);
 $color-background: rgb(27, 45, 55);
 $color-button: rgb(0, 178, 255);
 $color-optional: rgb(120, 136, 145);
