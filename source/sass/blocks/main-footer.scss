@@ -449,5 +449,14 @@
 .main-footer__hide-block--js {
   @include viewport--md {
     display: none;
+    // transition-duration: $time-transition;
+    // animation-duration: 1s;
+    // animation-name: disappear;
   }
 }
+
+// @keyframes disappear {
+//     0% {opacity: 0;}
+//     50% {opacity: 0.5;}
+//     100% {opacity: 1;}
+// }

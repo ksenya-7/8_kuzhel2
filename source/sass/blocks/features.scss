@@ -1,7 +1,17 @@
 .features {
+  position: relative;
   width: 60.94%;
   margin: 0 auto;
   padding-top: 112px;
+
+  @include viewport--xl {
+    width: 90.62%;
+  }
+
+  @include viewport--lg {
+    width: 90.62%;
+    padding-top: 38px;
+  }
 }
 
 .features__list {
@@ -28,14 +38,30 @@
   background-color: $color-fonbasic;
   border: 1px solid $color-border;
 
+  @include viewport--lg {
+    width: 47.9%;
+    min-height: 232px;
+    margin-right: 4.1%;
+    margin-bottom: 30px;
+    padding: 24px 20px 21px 27px;
+  }
+
+  @include viewport--md {
+    width: 100%;
+    min-height: 232px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 25px 11px 23px 27px;
+  }
+
   &::before {
     content: "";
     position: absolute;
     z-index: 5;
-    left: 0;
-    top: 0;
+    left: -1px;
+    top: -1px;
     width: 3px;
-    height: 100%;
+    height: calc(100% + 2px);
     background-color: $color-stroke;
   }
 
@@ -53,8 +79,29 @@
   }
 }
 
+.features__item:first-child {
+  @include viewport--md {
+    padding: 25px 13px 23px 27px;
+  }
+}
+
 .features__item:nth-child(2n) {
   margin-right: 0;
+}
+
+.features__icon--detective svg {
+  @include viewport--lg {
+    width: 31px;
+    height: 26px;
+  }
+}
+
+.features__icon--hired svg,
+.features__icon--tag svg {
+  @include viewport--lg {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .features__icon svg {
@@ -62,15 +109,35 @@
 }
 
 .features__item h3 {
-  margin-top: 23px;
+  margin: 0;
+  margin-top: 17px;
 
   font-family: $font-title;
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
   color: $color-stroke;
+
+  @include viewport--lg {
+    margin-top: 7px;
+  }
+
+  @include viewport--md {
+    margin-top: 13px;
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 .features__item p {
+  margin: 0;
   margin-top: 15px;
+
+  @include viewport--lg {
+    margin-top: 9px;
+  }
+
+  @include viewport--md {
+    margin-top: 10px;
+  }
 }

@@ -1,0 +1,104 @@
+.about-company {
+  display: flex;
+  position: relative;
+  width: 62.19%;
+  min-height: 317px;
+  margin: 77px 19.84% 0 17.97%;
+
+  @include viewport--lg {
+    width: 93.5%;
+    min-height: 349px;
+    margin: 27px 3.12% 0 3.12%;
+  }
+
+  @include viewport--md {
+    width: 90.62%;
+    min-height: 478px;
+    margin: 36px 4.68% 0 4.68%;
+  }
+}
+
+.about-company__year {
+  position: absolute;
+  top: 5px;
+  left: 0;
+
+  @include viewport--lg {
+    top: -3px;
+    left: -34px;
+  }
+
+  @include viewport--md {
+    display: none;
+  }
+}
+
+.about-company__year img {
+  @include viewport--lg {
+    width: 251px;
+    height: 362px;
+  }
+}
+
+.about-company__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 210px;
+
+  @include viewport--lg {
+    margin-left: 26.05%;
+  }
+
+  @include viewport--md {
+    margin-left: 0;
+  }
+}
+
+.about-company__info h2 {
+  margin: 0;
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  @include viewport--lg {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @include viewport--md {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.about-company__info p {
+  margin: 0;
+  margin-top: 21px;
+
+  @include viewport--lg {
+    overflow: hidden;
+    max-height: 90px;
+    margin-top: 22px;
+  }
+
+  @include viewport--md {
+    max-height: 177px;
+    margin-top: 19px;
+    margin-bottom: 25px;
+  }
+}
+
+.about-company__info a {
+  margin-top: 41px;
+  color: $color-stroke;
+  border: 1px solid $color-stroke;
+
+  @include viewport--lg {
+    margin-top: 39px;
+  }
+
+  @include viewport--lg {
+    margin-top: 1px;
+  }
+}
