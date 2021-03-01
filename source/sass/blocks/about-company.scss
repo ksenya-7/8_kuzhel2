@@ -5,6 +5,11 @@
   min-height: 317px;
   margin: 77px 19.84% 0 17.97%;
 
+  @include viewport--xl {
+    width: 93.5%;
+    margin: 27px 3.12% 0 3.12%;
+  }
+
   @include viewport--lg {
     width: 93.5%;
     min-height: 349px;
@@ -12,9 +17,10 @@
   }
 
   @include viewport--md {
-    width: 90.62%;
+    // width: 90.62%;
+    width: 290px;
     min-height: 478px;
-    margin: 36px 4.68% 0 4.68%;
+    margin: 36px auto 0 auto;
   }
 }
 

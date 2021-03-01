@@ -9,7 +9,12 @@
   }
 
   @include viewport--lg {
-    width: 90.62%;
+    width: 93.75%;
+    padding-top: 53px;
+  }
+
+  @include viewport--md {
+    width: 290px;
     padding-top: 38px;
   }
 }

@@ -153,6 +153,7 @@
   &:hover,
   &:focus {
     outline: none;
+    cursor: pointer;
     opacity: 0.5;
     transition-duration: $time-transition;
   }

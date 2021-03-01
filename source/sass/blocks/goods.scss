@@ -1,13 +1,20 @@
 .goods {
   width: 100%;
-  min-height: 938px;
   display: flex;
   flex-direction: column;
-  padding: 89px 19.53% 127px 19.53%;
+  padding: 89px 19.53% 107px 19.53%;
   background-color: $color-background;
 
   @include viewport--xl {
-    padding: 89px 11% 127px 11%;
+    padding: 89px 11% 107px 11%;
+  }
+
+  @include viewport--lg {
+    padding: 50px 3.12% 32px 3.12%;
+  }
+
+  @include viewport--md {
+    padding: 53px 4.69% 33px 4.69%;
   }
 }
 
@@ -19,6 +26,19 @@
   line-height: 51px;
 
   color: $color-fonbasic;
+
+  @include viewport--lg {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @include viewport--md {
+    margin-left: 10px;
+    width: 95%;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
 }
 
 .goods__list {
@@ -28,6 +48,14 @@
   margin: 0;
   margin-top: 50px;
   padding: 0;
+
+  @include viewport--lg {
+    flex-direction: column;
+  }
+
+  @include viewport--md {
+    margin-top: 40px;
+  }
 }
 
 .goods__item {
@@ -36,10 +64,22 @@
   margin: 0;
   margin-right: 2.56%;
   padding: 0;
+  margin-bottom: 20px;
+
+  @include viewport--lg {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 46px;
+  }
+
+  @include viewport--md {
+    margin-bottom: 31px;
+  }
 
   &::before {
     content: "";
     position: absolute;
+    z-index: 5;
     bottom: 0;
     right: 0;
     width: 63px;
@@ -71,4 +111,59 @@
   line-height: 30px;
 
   color: $color-fonbasic;
+
+  @include viewport--lg {
+    top: 40px;
+    width: 23%;
+  }
+
+  @include viewport--md {
+    top: 20px;
+    left: 35px;
+    width: 52%;
+  }
+}
+
+.goods__link {
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+    transition-duration: $time-transition;
+
+    img {
+      opacity: 0.5;
+      transition-duration: $time-transition;
+    }
+  }
+}
+
+.goods__photo img {
+  width: 100%;
+}
+
+.goods__photo--desktop {
+  @include viewport--lg {
+    display: none;
+  }
+}
+
+.goods__photo--tablet {
+  display: none;
+
+  @include viewport--lg {
+    display: block;
+  }
+
+  @include viewport--md {
+    display: none;
+  }
+}
+
+.goods__photo--mobile {
+  display: none;
+
+  @include viewport--md {
+    display: block;
+  }
 }

@@ -185,7 +185,9 @@
 
       <main>
         <div class="sections-wrapper">
-          <div class="sections-wrapper__img sections-wrapper__img--desktop">
+          <div
+            class="sections-wrapper__background sections-wrapper__background--desktop"
+          >
             <!-- 1х: 1920px; 2x: 3840px -->
             <img
               width="1920"
@@ -195,7 +197,9 @@
               alt="фон раздела"
             />
           </div>
-          <div class="sections-wrapper__img sections-wrapper__img--tablet">
+          <div
+            class="sections-wrapper__background sections-wrapper__background--tablet"
+          >
             <!-- 1х: 768px; 2x: 1536px -->
             <img
               width="768"
@@ -205,7 +209,9 @@
               alt="фон раздела"
             />
           </div>
-          <div class="sections-wrapper__img sections-wrapper__img--mobile">
+          <div
+            class="sections-wrapper__background sections-wrapper__background--mobile"
+          >
             <!-- 1х: 320px; 2x: 640px -->
             <img
               width="320"
@@ -322,40 +328,120 @@
         </div>
 
         <section id="goods" class="goods">
-          <h2>Service Device предлагает следующие товары и услуги</h2>
+          <h2>Service Device предлагает следующие товары и&nbsp;услуги</h2>
           <ul class="goods__list">
             <li class="goods__item">
-              <h3>Производство печатных плат</h3>
-              <!-- 1х: 370px; 2x: 740px -->
-              <img
-                width="370"
-                height="620"
-                src="img/content/desktop_goods1_1x.png"
-                srcset="img/content/desktop_goods1_2x.png 2x"
-                alt="Производство печатных плат"
-              />
+              <a
+                class="goods__link"
+                href="#"
+                aria-label="Сссылка на производство"
+              >
+                <h3>Производство печатных плат</h3>
+                <div class="goods__photo goods__photo--desktop">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img
+                    width="370"
+                    height="620"
+                    src="img/content/desktop_goods1_1x.png"
+                    srcset="img/content/desktop_goods1_2x.png 2x"
+                    alt="Производство печатных плат"
+                  />
+                </div>
+                <div class="goods__photo goods__photo--tablet">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img
+                    width="720"
+                    height="256"
+                    src="img/content/tablet_goods1_1x.png"
+                    srcset="img/content/tablet_goods1_2x.png 2x"
+                    alt="Производство печатных плат"
+                  />
+                </div>
+                <div class="goods__photo goods__photo--mobile">
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <img
+                    width="290"
+                    height="256"
+                    src="img/content/mobile_goods1_1x.png"
+                    srcset="img/content/mobile_goods1_2x.png 2x"
+                    alt="Производство печатных плат"
+                  />
+                </div>
+              </a>
             </li>
             <li class="goods__item">
-              <h3>Монтаж печатных плат</h3>
-              <!-- 1х: 370px; 2x: 740px -->
-              <img
-                width="370"
-                height="620"
-                src="img/content/desktop_goods2_1x.png"
-                srcset="img/content/desktop_goods2_2x.png 2x"
-                alt="Монтаж печатных плат"
-              />
+              <a class="goods__link" href="#" aria-label="Сссылка на монтаж">
+                <h3>Монтаж печатных плат</h3>
+                <div class="goods__photo goods__photo--desktop">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img
+                    width="370"
+                    height="620"
+                    src="img/content/desktop_goods2_1x.png"
+                    srcset="img/content/desktop_goods2_2x.png 2x"
+                    alt="Монтаж печатных плат"
+                  />
+                </div>
+                <div class="goods__photo goods__photo--tablet">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img
+                    width="720"
+                    height="256"
+                    src="img/content/tablet_goods2_1x.png"
+                    srcset="img/content/tablet_goods2_2x.png 2x"
+                    alt="Монтаж печатных плат"
+                  />
+                </div>
+                <div class="goods__photo goods__photo--mobile">
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <img
+                    width="290"
+                    height="256"
+                    src="img/content/mobile_goods2_1x.png"
+                    srcset="img/content/mobile_goods2_2x.png 2x"
+                    alt="Монтаж печатных плат"
+                  />
+                </div>
+              </a>
             </li>
             <li class="goods__item">
-              <h3>Комплектующие для светотехники</h3>
-              <!-- 1х: 370px; 2x: 740px -->
-              <img
-                width="370"
-                height="620"
-                src="img/content/desktop_goods3_1x.png"
-                srcset="img/content/desktop_goods3_2x.png 2x"
-                alt="Комплектующие для светотехники"
-              />
+              <a
+                class="goods__link"
+                href="#"
+                aria-label="Сссылка на комплектующие"
+              >
+                <h3>Комплектующие для светотехники</h3>
+                <div class="goods__photo goods__photo--desktop">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img
+                    width="370"
+                    height="620"
+                    src="img/content/desktop_goods3_1x.png"
+                    srcset="img/content/desktop_goods3_2x.png 2x"
+                    alt="Комплектующие для светотехники"
+                  />
+                </div>
+                <div class="goods__photo goods__photo--tablet">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img
+                    width="720"
+                    height="256"
+                    src="img/content/tablet_goods3_1x.png"
+                    srcset="img/content/tablet_goods3_2x.png 2x"
+                    alt="Комплектующие для светотехники"
+                  />
+                </div>
+                <div class="goods__photo goods__photo--mobile">
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <img
+                    width="290"
+                    height="256"
+                    src="img/content/mobile_goods3_1x.png"
+                    srcset="img/content/mobile_goods3_2x.png 2x"
+                    alt="Комплектующие для светотехники"
+                  />
+                </div>
+              </a>
             </li>
           </ul>
         </section>
