@@ -1,8 +1,11 @@
 import {ieFix} from './utils/ie-fix';
 import {iosVhFix} from './utils/ios-vh-fix';
 
+// import {scrollMenu} from './modules/scroll';
 import {initAccordion} from './modules/accordion';
-// import {initModals} from './modules/script';
+import {initPhoneMask} from './modules/phone-mask';
+import {formValidity} from './modules/form';
+// import {initModals} from './modules/init-modals';
 
 // Utils
 // ---------------------------------
@@ -14,3 +17,6 @@ iosVhFix();
 // ---------------------------------
 
 initAccordion();
+initPhoneMask();
+formValidity();
+// scrollMenu();

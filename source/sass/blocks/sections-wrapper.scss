@@ -14,32 +14,27 @@
 
 .sections-wrapper__background {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 1263px;
-}
-
-.sections-wrapper__background img {
-  // position: absolute;
-  top: -29px;
-  left: 0;
-  width: 100%;
-  height: 1263px;
+  top: 47px;
+  left: -180px;
+  width: 2071px;
+  height: 1111px;
 
   @include viewport--lg {
-    top: 0;
-    height: 1115px;
+    top: 244px;
+    left: -539px;
+    width: 1507px;
+    min-height: 746px;
   }
 
   @include viewport--md {
-    height: 1796px;
+    top: 800px;
+    left: 152px;
+    width: 482px;
+    min-height: 560px;
   }
 }
 
 .sections-wrapper__background--desktop {
-  top: -29px;
-
   @include viewport--lg {
     display: none;
   }

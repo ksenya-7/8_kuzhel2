@@ -1,0 +1,276 @@
+.feedback {
+  display: flex;
+  position: relative;
+  padding: 92px 19.53% 113px 18.23%;
+  background-color: $color-stroke;
+
+  @include viewport--xxl {
+    padding: 92px 11.2% 113px 11.33%;
+  }
+
+  @include viewport--lg {
+    padding: 80px 11.2% 104px 11.33%;
+  }
+
+  @include viewport--md {
+    padding: 30px 4.53% 42px 4.53%;
+  }
+}
+
+.feedback svg {
+  position: absolute;
+  // z-index: 1;
+  top: 94px;
+  left: 10.21%;
+  width: 1801px;
+  height: 517px;
+
+  @include viewport--lg {
+    display: none;
+  }
+}
+
+.feedback__photo {
+  z-index: 5;
+  margin-top: 69px;
+
+  @include viewport--lg {
+    display: none;
+  }
+}
+
+.feedback form {
+  margin-left: 114px;
+  z-index: 5;
+
+  @include viewport--lg {
+    width: 100%;
+    margin-left: 4px;
+  }
+
+  @include viewport--lg {
+    margin-left: 0;
+  }
+}
+
+.feedback__form {
+  width: 100%;
+}
+
+.feedback__form h3 {
+  margin: 0;
+  margin-left: -4px;
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  color: $color-fonbasic;
+
+  @include viewport--lg {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @include viewport--md {
+    margin-left: 0;
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.feedback__form p {
+  margin: 0;
+  margin-top: 8px;
+  color: $color-fonbasic;
+
+  @include viewport--lg {
+    margin-top: 16px;
+  }
+
+  @include viewport--md {
+    margin-top: 12px;
+  }
+}
+
+.feedback__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+  margin: 0;
+  margin-top: 53px;
+  padding: 0;
+
+  @include viewport--lg {
+    margin-top: 55px;
+  }
+
+  @include viewport--md {
+    margin-top: 26px;
+  }
+}
+
+.feedback__item {
+  width: 47.37%;
+  margin: 0;
+  margin-right: 5.26%;
+
+  @include viewport--md {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.feedback__item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.feedback__item input {
+  width: 100%;
+  min-height: 50px;
+  padding: 14px 17px;
+  background-color: $color-fonbasic1;
+  color: $color-fonbasic;
+  border: none;
+
+  @include viewport--md {
+    min-height: 52px;
+    padding: 14px 17px 19px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $color-fonbasic;
+    transition-duration: $time-transition;
+  }
+}
+
+.feedback__item input::-webkit-input-placeholder {
+  color: $color-fonbasic;
+}
+
+.feedback__item input:-moz-placeholder {
+  color: $color-fonbasic;
+}
+
+.feedback__form textarea {
+  min-height: 154px;
+  width: 100%;
+  margin-top: 40px;
+  padding: 14px 17px;
+  background-color: $color-fonbasic1;
+  color: $color-fonbasic;
+  border: none;
+
+  @include viewport--lg {
+    min-height: 160px;
+    margin-top: 42px;
+  }
+
+  @include viewport--md {
+    min-height: 104px;
+    margin-top: 0;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $color-fonbasic;
+    transition-duration: $time-transition;
+  }
+}
+
+.feedback__form textarea::-webkit-input-placeholder {
+  color: $color-fonbasic;
+}
+
+.feedback__form textarea:-moz-placeholder {
+  color: $color-fonbasic;
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 36px;
+
+  @include viewport--lg {
+    margin-top: 40px;
+  }
+
+  @include viewport--md {
+    margin-top: 25px;
+  }
+}
+
+.feedback__wrapper input {
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.feedback__wrapper input:checked + label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 6px;
+    width: 5px;
+    height: 7px;
+    transform: translateY(-50%) skewX(-3deg) rotate(44deg);
+    border-bottom: 1px solid $color-fonbasic;
+    border-right: 1px solid $color-fonbasic;
+  }
+}
+
+.feedback__wrapper label {
+  position: relative;
+  width: 40.35%;
+  margin-left: 38px;
+  padding-left: 32px;
+  padding-top: 8px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-fonbasic;
+  opacity: 0.8;
+
+  @include viewport--lg {
+    margin-left: 41px;
+  }
+
+  @include viewport--md {
+    width: 100%;
+    margin-top: 24px;
+    margin-left: 0;
+    padding-left: 34px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    // cursor: pointer;
+    top: 8px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $color-fonbasic;
+  }
+}
+
+.feedback__button {
+  width: 47.37%;
+  color: $color-fonbasic;
+  border: 1px solid $color-fonbasic;
+
+  @include viewport--md {
+    width: 100%;
+  }
+}
+
+input.js-invalid {
+  border: 1px solid $color-invalid;
+}

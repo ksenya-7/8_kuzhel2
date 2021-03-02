@@ -21,6 +21,7 @@ $font-title: "Roboto Condensed", "Verdana", sans-serif;
 //colors
 //-----------
 $color-fonbasic:rgb(255, 255, 255);
+$color-fonbasic1:rgba(255, 255, 255, 0.1);
 $color-text: rgb(102, 102, 102);
 $color-line: rgba(98, 105, 98, 0.2);
 $color-title: rgb(32, 60, 66);
@@ -30,5 +31,6 @@ $color-background: rgb(27, 45, 55);
 $color-button: rgb(0, 178, 255);
 $color-optional: rgb(120, 136, 145);
 // $color-social:  rgb(205, 205, 205);
+$color-invalid:  rgb(178, 0, 255);
 
 $color-overlay:  rgba(0, 0, 0, 0.5);
