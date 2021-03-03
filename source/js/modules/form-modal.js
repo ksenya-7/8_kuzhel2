@@ -1,10 +1,10 @@
 const MIN_TEXT_LENGTH = 3;
 const TEL_LENGTH = 17;
-const textInput = document.querySelector('.feedback__form input[type="text"]');
-const telInput = document.querySelector('.feedback__form input[type="tel"]');
-const message = document.querySelector('.feedback__form textarea');
-const buttonSubmit = document.querySelector('.feedback__button');
-const form = document.querySelector('.feedback form');
+const textInput = document.querySelector('.modal__form input[type="text"]');
+const telInput = document.querySelector('.modal__form input[type="tel"]');
+const message = document.querySelector('.modal__form textarea');
+const buttonSubmit = document.querySelector('.modal__button');
+const form = document.querySelector('.modal form');
 let isStorageSupport = true;
 let storageText = '';
 let storageTel = '';
@@ -38,7 +38,7 @@ if (isStorageSupport) {
   message.value = storageMessage;
 }
 
-const formValidity = () => {
+const formModalValidity = () => {
   if (buttonSubmit) {
     buttonSubmit.addEventListener('click', (evt) => {
       let isLengthOfText = true;
@@ -90,4 +90,4 @@ const formValidity = () => {
   });
 };
 
-export {formValidity};
+export {formModalValidity};

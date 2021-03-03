@@ -420,7 +420,17 @@
 
   @include viewport--md {
     display: flex;
+    position: relative;
     margin-left: auto;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -20px;
+      right: -10px;
+      width: 100%;
+      height: 50px;
+    }
 
     &:hover,
     &:focus {

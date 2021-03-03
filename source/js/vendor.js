@@ -1,7 +1,4 @@
-// import './vendor/swiper';
-import swiper from './vendor/swiper';
+import './vendor/move-to';
 
 // Vendor
 // ---------------------------------
-
-swiper('.tabs');

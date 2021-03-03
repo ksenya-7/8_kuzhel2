@@ -152,7 +152,7 @@
             </p>
             <a
               href="#feedback"
-              class="intro__scroll-to-form"
+              class="intro__scroll-to-form js-trigger"
               aria-label="скролл к форме"
             >
               <span class="intro__link intro__link--desktop"
@@ -164,7 +164,7 @@
             </a>
             <a
               href="#features"
-              class="intro__scroll-to-features"
+              class="intro__scroll-to-features js-trigger"
               aria-label="Скролл к следующему разделу"
               >Скролл вниз</a
             >
@@ -502,6 +502,7 @@
                 </li>
               </ul>
               <textarea
+                name="message"
                 rows="4"
                 placeholder="Ваш вопрос"
                 resize="none"
@@ -665,7 +666,86 @@
           >
         </section>
       </footer>
+
+      <div class="modal">
+        <div class="modal__wrapper">
+          <div class="modal__overlay"></div>
+          <div class="modal__callback">
+            <button
+              class="modal__close-btn"
+              type="button"
+              aria-label="закрыть окно"
+            >
+              <svg width="17" height="17" viewBox="0 0 17 17">
+                <use xlink:href="#modal-close"></use>
+              </svg>
+            </button>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <div class="modal__form">
+                <h3>Закажите звонок</h3>
+                <p>
+                  Оставьте контакты, мы проконсультируем вас бесплатно в удобное
+                  время
+                </p>
+                <ul class="modal__list">
+                  <li class="modal__item">
+                    <!-- класс js-invalid делает border красным -->
+                    <input
+                      id="user-name"
+                      type="text"
+                      name="user-name"
+                      placeholder="Имя"
+                      minlength="3"
+                      aria-label="поле для ввода имени пользователя"
+                      required
+                    />
+                  </li>
+                  <li class="modal__item">
+                    <!-- класс js-invalid делает border красным -->
+                    <input
+                      data-type="tel"
+                      id="user-tel"
+                      type="tel"
+                      name="user-tel"
+                      placeholder="Телефон"
+                      aria-label="поле для ввода телефона пользователя"
+                      required
+                    />
+                  </li>
+                </ul>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Ваш вопрос"
+                  resize="none"
+                  contenteditable="true"
+                ></textarea>
+                <button
+                  class="btn modal__button"
+                  type="submit"
+                  aria-label="отправить вопрос"
+                >
+                  Отправить
+                </button>
+                <div class="modal__field">
+                  <input
+                    id="user-checkbox"
+                    type="checkbox"
+                    name="user-checkbox"
+                    checked
+                    disabled
+                  />
+                  <label for="user-checkbox"
+                    >Я согласен на обработку персональных данных</label
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

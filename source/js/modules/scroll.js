@@ -1,32 +1,15 @@
-const scrollMenu = (links, speed) => {
-  for (const iter of links) {
-    iter.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      const anchor = document.querySelector(iter.getAttribute('href'));
-      const coordAnchor = anchor.getBoundingClientRect().top;
-      const windowY = window.pageYOffset;
-      let start = null;
+const moveTo = new window.MoveTo({
+  duration: 800,
+  easing: 'easeOutQuart',
+});
 
-      requestAnimationFrame(step);
-
-      function step(time) {
-        if (start === null) {
-          start = time;
-        }
-        let progress = time - start;
-
-        let coordY =
-          coordAnchor < 0
-            ? Math.max(windowY - progress / speed, windowY + coordAnchor)
-            : Math.min(windowY + progress / speed, windowY + coordAnchor);
-
-        window.scrollTo(0, coordY);
-        if (coordY !== windowY + coordAnchor) {
-          requestAnimationFrame(step);
-        }
-      }
+const scroll = () => {
+  const anchors = document.querySelectorAll('.js-trigger');
+  if (anchors.length) {
+    anchors.forEach((anchor) => {
+      moveTo.registerTrigger(anchor);
     });
   }
 };
 
-export {scrollMenu};
+export {scroll};

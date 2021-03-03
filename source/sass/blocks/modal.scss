@@ -1,0 +1,220 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: none;
+}
+
+.modal--active {
+  display: flex;
+}
+
+.modal--open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.modal__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100%;
+  padding: 40px 0;
+}
+
+.modal__callback {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+
+  width: 490px;
+  min-height: 605px;
+  margin: 96px auto auto auto;
+  padding: 32px 39px 36px 39px;
+  background: $color-stroke;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: $color-overlay;
+}
+
+
+.modal__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background-color: transparent;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.modal__form h3 {
+  margin: 0;
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+
+  color: $color-fonbasic;
+}
+
+.modal__form p {
+  margin: 0;
+  max-width: 385px;
+  margin-top: 12px;
+  color: $color-fonbasic;
+}
+
+.modal__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.modal__item {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.modal__item input {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 24px 18px;
+  background-color: $color-fonbasic1;
+  color: $color-fonbasic;
+  border: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $color-fonbasic;
+    transition-duration: $time-transition;
+  }
+}
+
+.modal__item input::-webkit-input-placeholder {
+  color: $color-fonbasic;
+}
+
+.modal__item input:-moz-placeholder {
+  color: $color-fonbasic;
+}
+
+.modal__form textarea {
+  width: 100%;
+  min-height: 104px;
+  margin-top: 0;
+  padding: 14px 24px;
+
+  background-color: $color-fonbasic1;
+  color: $color-fonbasic;
+  border: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $color-fonbasic;
+    transition-duration: $time-transition;
+  }
+}
+
+.modal__form textarea::-webkit-input-placeholder {
+  color: $color-fonbasic;
+}
+
+.modal__form textarea:-moz-placeholder {
+  color: $color-fonbasic;
+}
+
+.modal__field {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.modal__field input {
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.modal__field input:checked + label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 6px;
+    width: 5px;
+    height: 7px;
+    transform: translateY(-50%) skewX(-3deg) rotate(44deg);
+    border-bottom: 1px solid $color-fonbasic;
+    border-right: 1px solid $color-fonbasic;
+  }
+}
+
+.modal__field label {
+  position: relative;
+  display: flex;
+  width: 90%;
+
+  padding-left: 50px;
+  padding-top: 8px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-fonbasic;
+  opacity: 0.8;
+
+  &::before {
+    content: "";
+    position: absolute;
+    // cursor: pointer;
+    top: 8px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $color-fonbasic;
+  }
+}
+
+.modal__button {
+  width: 100%;
+  min-height: 47px;
+  margin-top: 30px;
+  color: $color-fonbasic;
+  border: 1px solid $color-fonbasic;
+}
+
+.modal__item .js-invalid {
+  border: 1px solid $color-invalid;
+}

@@ -2,19 +2,15 @@ const toggles = document.querySelectorAll('.main-footer__toggle.main-footer__tog
 const blocks = document.querySelectorAll('.main-footer__hide-block');
 
 const closeLists = () => {
-  if (blocks) {
-    blocks.forEach((element) => {
-      element.classList.add('main-footer__hide-block--js');
-    });
-  }
+  blocks.forEach((element) => {
+    element.classList.add('main-footer__hide-block--js');
+  });
 };
 
 const deactiveToggles = () => {
-  if (toggles) {
-    toggles.forEach((element) => {
-      element.classList.remove('main-footer__toggle--active');
-    });
-  }
+  toggles.forEach((element) => {
+    element.classList.remove('main-footer__toggle--active');
+  });
 };
 
 const toggleBlock = (block, toggle) => {
