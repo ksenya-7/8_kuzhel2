@@ -236,6 +236,20 @@
   }
 }
 
+.intro__link--desktop {
+  @include viewport--md {
+    display: none;
+  }
+}
+
+.intro__link--mobile {
+  display: none;
+
+  @include viewport--md {
+    display: block;
+  }
+}
+
 .intro__scroll-to-features {
   margin-left: -35px;
   margin-top: 130px;

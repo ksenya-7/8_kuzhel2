@@ -1,14 +1,14 @@
 .sections-wrapper {
   position: relative;
   width: 100%;
-  min-height: 1263px;
+  min-height: 1264px;
 
   @include viewport--lg {
-    min-height: 1115px;
+    min-height: 1110px;
   }
 
   @include viewport--md {
-    min-height: 1796px;
+    min-height: 1792px;
   }
 }
 
@@ -20,8 +20,8 @@
   height: 1111px;
 
   @include viewport--lg {
-    top: 244px;
-    left: -539px;
+    top: 240px;
+    left: -537px;
     width: 1507px;
     min-height: 746px;
   }

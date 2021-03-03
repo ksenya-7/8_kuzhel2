@@ -30,8 +30,8 @@
   left: 0;
 
   @include viewport--lg {
-    top: -3px;
-    left: -34px;
+    top: -4px;
+    left: -31px;
   }
 
   @include viewport--md {
@@ -52,7 +52,7 @@
   margin-left: 210px;
 
   @include viewport--lg {
-    margin-left: 26.05%;
+    margin-left: 26.2%;
   }
 
   @include viewport--md {
