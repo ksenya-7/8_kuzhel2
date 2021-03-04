@@ -6,7 +6,7 @@ let storageText = '';
 let storageTel = '';
 let storageMessage = '';
 
-const validity = (text, tel, message, btn, form) => {
+const initValidity = (text, tel, message, btn, form) => {
   try {
     storageText = localStorage.getItem('user-name');
   } catch (err) {
@@ -86,4 +86,4 @@ const validity = (text, tel, message, btn, form) => {
   });
 };
 
-export {validity};
+export {initValidity};

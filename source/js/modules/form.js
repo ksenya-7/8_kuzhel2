@@ -1,4 +1,4 @@
-import {validity} from './validity';
+import {initValidity} from './validity';
 
 const textInput = document.querySelector('.feedback__form input[type="text"]');
 const telInput = document.querySelector('.feedback__form input[type="tel"]');
@@ -7,7 +7,7 @@ const buttonSubmit = document.querySelector('.feedback__button');
 const form = document.querySelector('.feedback form');
 
 const initFormValidity = () => {
-  validity(textInput, telInput, message, buttonSubmit, form);
+  initValidity(textInput, telInput, message, buttonSubmit, form);
 };
 
 export {initFormValidity};

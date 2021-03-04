@@ -206,7 +206,7 @@ var buttonSubmit = document.querySelector('.modal__button');
 var form = document.querySelector('.modal form');
 
 var initFormModalValidity = function initFormModalValidity() {
-  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["validity"])(textInput, telInput, message, buttonSubmit, form);
+  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["initValidity"])(textInput, telInput, message, buttonSubmit, form);
 };
 
 
@@ -232,7 +232,7 @@ var buttonSubmit = document.querySelector('.feedback__button');
 var form = document.querySelector('.feedback form');
 
 var initFormValidity = function initFormValidity() {
-  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["validity"])(textInput, telInput, message, buttonSubmit, form);
+  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["initValidity"])(textInput, telInput, message, buttonSubmit, form);
 };
 
 
@@ -381,12 +381,12 @@ var initScroll = function initScroll() {
 /*!********************************!*\
   !*** ./js/modules/validity.js ***!
   \********************************/
-/*! exports provided: validity */
+/*! exports provided: initValidity */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validity", function() { return validity; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initValidity", function() { return initValidity; });
 var MIN_TEXT_LENGTH = 3;
 var TEL_LENGTH = 17;
 var isStorageSupport = true;
@@ -394,7 +394,7 @@ var storageText = '';
 var storageTel = '';
 var storageMessage = '';
 
-var validity = function validity(text, tel, message, btn, form) {
+var initValidity = function initValidity(text, tel, message, btn, form) {
   try {
     storageText = localStorage.getItem('user-name');
   } catch (err) {
