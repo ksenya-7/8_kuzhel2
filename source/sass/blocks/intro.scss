@@ -131,8 +131,6 @@
 }
 
 .intro__photo--desktop {
-  overflow: hidden;
-
   @include viewport--lg {
     display: none;
   }
@@ -198,7 +196,7 @@
   min-height: 55px;
   margin-top: 43px;
   margin-left: 98px;
-  padding: 12px 28px 14px;
+  padding: 12px 28px 12px;
 
   background: $color-stroke;
   border-radius: 5px;

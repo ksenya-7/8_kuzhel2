@@ -511,8 +511,8 @@
                 name="message"
                 rows="4"
                 placeholder="Ваш вопрос"
-                resize="none"
                 contenteditable="true"
+                aria-label="поле для вопроса"
               ></textarea>
               <div class="feedback__wrapper">
                 <button
@@ -599,7 +599,9 @@
                 </svg>
               </span>
             </button>
-            <div class="main-footer__site-block main-footer__hide-block">
+            <div
+              class="main-footer__site-block main-footer__hide-block main-footer__hide-block--js"
+            >
               <ul class="main-footer__site-list">
                 <li class="main-footer__site-item">
                   <a href="#" aria-label="скролл к разделу">О компании</a>
@@ -648,7 +650,9 @@
                 </svg>
               </span>
             </button>
-            <div class="main-footer__address-block main-footer__hide-block">
+            <div
+              class="main-footer__address-block main-footer__hide-block main-footer__hide-block--js"
+            >
               <p>г. Мытищи, Олимпийский проспект, д.10</p>
               <p>+7 (495) 589-40-50</p>
               <p>+7 (925) 003-87-67</p>
@@ -701,7 +705,7 @@
                   <li class="modal__item">
                     <!-- класс js-invalid делает border красным -->
                     <input
-                      id="user-name"
+                      id="modal-user-name"
                       type="text"
                       name="user-name"
                       placeholder="Имя"
@@ -714,7 +718,7 @@
                     <!-- класс js-invalid делает border красным -->
                     <input
                       data-type="tel"
-                      id="user-tel"
+                      id="modal-user-tel"
                       type="tel"
                       name="user-tel"
                       placeholder="Телефон"
@@ -724,11 +728,11 @@
                   </li>
                 </ul>
                 <textarea
-                  name="message"
+                  name="modal-message"
                   rows="4"
                   placeholder="Ваш вопрос"
-                  resize="none"
                   contenteditable="true"
+                  aria-label="поле для сообщения"
                 ></textarea>
                 <button
                   class="btn modal__button"
@@ -739,7 +743,7 @@
                 </button>
                 <div class="modal__field">
                   <input
-                    id="user-checkbox"
+                    id="modal-user-checkbox"
                     type="checkbox"
                     name="user-checkbox"
                     checked

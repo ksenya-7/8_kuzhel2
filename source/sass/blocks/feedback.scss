@@ -165,6 +165,7 @@
   background-color: $color-fonbasic1;
   color: $color-fonbasic;
   border: none;
+  resize: none;
 
   @include viewport--lg {
     min-height: 160px;

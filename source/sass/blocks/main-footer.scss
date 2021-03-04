@@ -184,6 +184,10 @@
 .main-footer__site-block {
   max-height: 100%;
 
+  @include viewport--xl {
+    min-height: 175px;
+  }
+
   @include viewport--lg {
     min-height: 175px;
   }
