@@ -334,4 +334,4 @@ var moveTo = function moveTo() {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=vendor.min.js.map
+//# sourceMappingURL=vendor.js.map

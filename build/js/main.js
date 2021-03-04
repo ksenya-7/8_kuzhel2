@@ -1022,4 +1022,4 @@ var enableScrolling = function enableScrolling() {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.min.js.map
+//# sourceMappingURL=main.js.map
