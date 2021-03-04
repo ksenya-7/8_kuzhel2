@@ -128,45 +128,18 @@
   }
 }
 
-.main-header__logo svg {
-  @include viewport--md {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-.main-header__logo-text {
-  display: flex;
-  flex-direction: column;
-  min-height: 45px;
-  margin-left: 16px;
-
+.main-header__logo--desktop {
   @include viewport--md {
     display: none;
   }
 }
 
-.main-header__logo h3 {
-  margin: 0;
-  margin-top: 6px;
-  font-family: $font-title;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 29px;
+.main-header__logo--mobile {
+  display: none;
 
-  color: $color-fonbasic;
-}
-
-.main-header__logo p {
-  max-width: 134px;
-  margin: 0;
-  margin-top: 1px;
-  font-family: $font-optional;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-
-  color: $color-optional;
+  @include viewport--md {
+    display: flex;
+  }
 }
 
 .main-header__list {

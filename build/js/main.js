@@ -119,10 +119,10 @@ Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__["iosVhFix"])(); // Modules
 
 Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_3__["initAccordion"])();
 Object(_modules_phone_mask__WEBPACK_IMPORTED_MODULE_4__["initPhoneMask"])();
-Object(_modules_form__WEBPACK_IMPORTED_MODULE_5__["formValidity"])();
-Object(_modules_scroll__WEBPACK_IMPORTED_MODULE_2__["scroll"])();
+Object(_modules_form__WEBPACK_IMPORTED_MODULE_5__["initFormValidity"])();
+Object(_modules_scroll__WEBPACK_IMPORTED_MODULE_2__["initScroll"])();
 Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_6__["initModals"])();
-Object(_modules_form_modal__WEBPACK_IMPORTED_MODULE_7__["formModalValidity"])();
+Object(_modules_form_modal__WEBPACK_IMPORTED_MODULE_7__["initFormModalValidity"])();
 
 /***/ }),
 
@@ -191,12 +191,12 @@ var initAccordion = function initAccordion() {
 /*!**********************************!*\
   !*** ./js/modules/form-modal.js ***!
   \**********************************/
-/*! exports provided: formModalValidity */
+/*! exports provided: initFormModalValidity */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formModalValidity", function() { return formModalValidity; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initFormModalValidity", function() { return initFormModalValidity; });
 /* harmony import */ var _validity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validity */ "./js/modules/validity.js");
 
 var textInput = document.querySelector('.modal__form input[type="text"]');
@@ -205,7 +205,7 @@ var message = document.querySelector('.modal__form textarea');
 var buttonSubmit = document.querySelector('.modal__button');
 var form = document.querySelector('.modal form');
 
-var formModalValidity = function formModalValidity() {
+var initFormModalValidity = function initFormModalValidity() {
   Object(_validity__WEBPACK_IMPORTED_MODULE_0__["validity"])(textInput, telInput, message, buttonSubmit, form);
 };
 
@@ -217,12 +217,12 @@ var formModalValidity = function formModalValidity() {
 /*!****************************!*\
   !*** ./js/modules/form.js ***!
   \****************************/
-/*! exports provided: formValidity */
+/*! exports provided: initFormValidity */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formValidity", function() { return formValidity; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initFormValidity", function() { return initFormValidity; });
 /* harmony import */ var _validity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validity */ "./js/modules/validity.js");
 
 var textInput = document.querySelector('.feedback__form input[type="text"]');
@@ -231,7 +231,7 @@ var message = document.querySelector('.feedback__form textarea');
 var buttonSubmit = document.querySelector('.feedback__button');
 var form = document.querySelector('.feedback form');
 
-var formValidity = function formValidity() {
+var initFormValidity = function initFormValidity() {
   Object(_validity__WEBPACK_IMPORTED_MODULE_0__["validity"])(textInput, telInput, message, buttonSubmit, form);
 };
 
@@ -352,18 +352,18 @@ var initPhoneMask = function initPhoneMask() {
 /*!******************************!*\
   !*** ./js/modules/scroll.js ***!
   \******************************/
-/*! exports provided: scroll */
+/*! exports provided: initScroll */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scroll", function() { return scroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initScroll", function() { return initScroll; });
 var moveTo = new window.MoveTo({
   duration: 800,
   easing: 'easeOutQuart'
 });
 
-var scroll = function scroll() {
+var initScroll = function initScroll() {
   var anchors = document.querySelectorAll('.js-trigger');
 
   if (anchors.length) {

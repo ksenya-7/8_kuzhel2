@@ -6,8 +6,6 @@ $viewport--lg: 1024px;
 $viewport--xl: 1500px;
 $viewport--xxl: 1800px;
 
-// $content--xl: 1170px;
-
 //timing
 //-----------
 $time-transition: 0.5s;
@@ -15,7 +13,6 @@ $time-transition: 0.5s;
 //fonts
 //-----------
 $font-main: "PT Mono", "Courier New", monospace;
-$font-optional: "Roboto", "Arial", sans-serif;
 $font-title: "Roboto Condensed", "Verdana", sans-serif;
 
 //colors
@@ -31,7 +28,5 @@ $color-border:  rgb(235, 235, 235);
 $color-background: rgb(27, 45, 55);
 $color-button: rgb(0, 178, 255);
 $color-optional: rgb(120, 136, 145);
-// $color-social:  rgb(205, 205, 205);
 $color-invalid:  rgb(178, 0, 255);
-
 $color-overlay:  rgba(0, 0, 0, 0.5);
