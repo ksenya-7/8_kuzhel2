@@ -384,12 +384,8 @@ template {
 
 html,
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  scroll-behavior: smooth; }
+  padding: 0; }
 
 a {
   margin: 0;
@@ -469,6 +465,7 @@ body {
   left: 0;
   width: 100%;
   min-height: 878px;
+  overflow: hidden;
   background-color: #1b2d37; }
   @media (max-width: 1023px) {
     .main-header__wrapper {
@@ -768,14 +765,13 @@ body {
 .intro__photo {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+  display: flex; }
 
-@media (max-width: 1023px) {
-  .intro__photo--desktop {
-    display: none; } }
+.intro__photo--desktop {
+  overflow: hidden; }
+  @media (max-width: 1023px) {
+    .intro__photo--desktop {
+      display: none; } }
 
 .intro__photo--desktop img {
   width: 705px;
@@ -801,7 +797,10 @@ body {
     .intro__photo--mobile {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
 
 .intro__photo--tablet img {
   width: 260px;
@@ -1022,7 +1021,8 @@ body {
 .sections-wrapper {
   position: relative;
   width: 100%;
-  min-height: 1264px; }
+  min-height: 1264px;
+  overflow: hidden; }
   @media (max-width: 1023px) {
     .sections-wrapper {
       min-height: 1110px; } }
@@ -1035,7 +1035,8 @@ body {
   top: 47px;
   left: -180px;
   width: 2071px;
-  height: 1111px; }
+  height: 1111px;
+  overflow: hidden; }
   @media (max-width: 1023px) {
     .sections-wrapper__background {
       top: 240px;
@@ -1333,7 +1334,8 @@ body {
   top: 94px;
   left: 10.21%;
   width: 1801px;
-  height: 517px; }
+  height: 517px;
+  overflow: hidden; }
   @media (max-width: 1023px) {
     .feedback svg {
       display: none; } }
@@ -1944,11 +1946,11 @@ body {
       margin-left: auto; }
       .main-footer__toggle::before {
         position: absolute;
-        content: '';
-        top: -20px;
-        right: -10px;
-        width: 100%;
-        height: 50px; }
+        content: "";
+        top: -26px;
+        right: -15px;
+        width: 1024px;
+        height: 74px; }
       .main-footer__toggle:hover, .main-footer__toggle:focus {
         outline: none;
         cursor: pointer; }
@@ -2097,7 +2099,7 @@ body {
 .modal__form textarea {
   width: 100%;
   min-height: 104px;
-  margin-top: 0px;
+  margin-top: 0;
   padding: 14px 24px;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;

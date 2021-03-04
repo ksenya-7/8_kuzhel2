@@ -24,6 +24,7 @@
   left: 10.21%;
   width: 1801px;
   height: 517px;
+  overflow: hidden;
 
   @include viewport--lg {
     display: none;

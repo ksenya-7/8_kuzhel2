@@ -1,7 +1,7 @@
 import {ieFix} from './utils/ie-fix';
 import {iosVhFix} from './utils/ios-vh-fix';
 
-// import {scroll} from './modules/scroll';
+import {scroll} from './modules/scroll';
 import {initAccordion} from './modules/accordion';
 import {initPhoneMask} from './modules/phone-mask';
 import {formValidity} from './modules/form';
@@ -20,6 +20,6 @@ iosVhFix();
 initAccordion();
 initPhoneMask();
 formValidity();
-// scroll();
+scroll();
 initModals();
 formModalValidity();

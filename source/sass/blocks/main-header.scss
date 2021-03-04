@@ -47,6 +47,8 @@
   left: 0;
   width: 100%;
   min-height: 878px;
+  overflow: hidden;
+
   background-color: $color-background;
 
   @include viewport--lg {
