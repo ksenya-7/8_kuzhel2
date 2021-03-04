@@ -423,6 +423,9 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+.scroll-lock {
+  position: fixed; }
+
 .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2019,7 +2022,6 @@ body {
   overflow: hidden; }
 
 .modal__wrapper {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2028,6 +2030,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
   width: 100%;
   min-height: 100%;
   padding: 40px 0; }
