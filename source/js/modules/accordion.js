@@ -3,7 +3,8 @@ const blocks = document.querySelectorAll('.main-footer__hide-block');
 
 const closeLists = () => {
   blocks.forEach((element) => {
-    element.classList.add('main-footer__hide-block--js');
+    element.classList.remove('main-footer__hide-block--js');
+    element.style.maxHeight = 0;
   });
 };
 
@@ -31,6 +32,8 @@ const initAccordion = () => {
       } else {
         closeLists();
         deactiveToggles();
+        const maxHeight = blocks[i].style.maxHeight;
+        blocks[i].style.maxHeight = (maxHeight) ? null : blocks[i].scrollHeight + 'px';
         toggleBlock(blocks[i], toggles[i]);
       }
     });

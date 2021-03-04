@@ -346,7 +346,8 @@ template {
           flex-direction: column;
   width: 100%;
   height: 100%;
-  min-width: 320px; }
+  min-width: 320px;
+  overflow-x: hidden; }
 
 @font-face {
   font-family: "PT Mono";
@@ -472,7 +473,7 @@ body {
       min-height: 686px; } }
   @media (max-width: 767px) {
     .main-header__wrapper {
-      min-height: 646px; } }
+      min-height: 647px; } }
 
 .main-header__wrapper img {
   position: absolute;
@@ -942,7 +943,7 @@ body {
       min-height: 232px;
       margin-right: 4.1%;
       margin-bottom: 30px;
-      padding: 24px 20px 21px 27px; } }
+      padding: 24px 20px 24px 27px; } }
   @media (max-width: 767px) {
     .features__item {
       width: 100%;
@@ -1025,17 +1026,17 @@ body {
   overflow: hidden; }
   @media (max-width: 1023px) {
     .sections-wrapper {
-      min-height: 1110px; } }
+      min-height: 1112px; } }
   @media (max-width: 767px) {
     .sections-wrapper {
-      min-height: 1792px; } }
+      min-height: 1795px; } }
 
 .sections-wrapper__background {
   position: absolute;
   top: 47px;
   left: -180px;
   width: 2071px;
-  height: 1111px;
+  min-height: 1111px;
   overflow: hidden; }
   @media (max-width: 1023px) {
     .sections-wrapper__background {
@@ -1085,12 +1086,12 @@ body {
     .about-company {
       width: 93.5%;
       min-height: 349px;
-      margin: 27px 3.12% 0 3.12%; } }
+      margin: 29px 3.12% 0 3%; } }
   @media (max-width: 767px) {
     .about-company {
       width: 290px;
       min-height: 478px;
-      margin: 36px auto 0 auto; } }
+      margin: 42px auto 0 auto; } }
 
 .about-company__year {
   position: absolute;
@@ -1120,7 +1121,7 @@ body {
   margin-left: 210px; }
   @media (max-width: 1023px) {
     .about-company__info {
-      margin-left: 26.2%; } }
+      margin-left: 26.25%; } }
   @media (max-width: 767px) {
     .about-company__info {
       margin-left: 0; } }
@@ -1181,10 +1182,10 @@ body {
       padding: 89px 11% 109px 11%; } }
   @media (max-width: 1023px) {
     .goods {
-      padding: 50px 3.12% 32px 3.12%; } }
+      padding: 50px 3.12% 30px 3.12%; } }
   @media (max-width: 767px) {
     .goods {
-      padding: 53px 4.69% 33px 4.69%; } }
+      padding: 50px 4.69% 31px 4.69%; } }
 
 .goods h2 {
   margin: 0;
@@ -1222,7 +1223,7 @@ body {
               flex-direction: column; } }
   @media (max-width: 767px) {
     .goods__list {
-      margin-top: 40px; } }
+      margin-top: 45px; } }
 
 .goods__item {
   position: relative;
@@ -1593,7 +1594,7 @@ body {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       width: 93.8%;
-      margin: 17px 3% 0 3.1%; } }
+      margin: 17px 3% 25px 3.1%; } }
   @media (max-width: 767px) {
     .main-footer__wrapper {
       width: 100%;
@@ -1725,6 +1726,19 @@ body {
       border-top: 1px solid rgba(98, 105, 98, 0.2);
       border-bottom: 1px solid rgba(98, 105, 98, 0.2); } }
 
+.main-footer__site-block {
+  max-height: 100%; }
+  @media (max-width: 1023px) {
+    .main-footer__site-block {
+      min-height: 175px; } }
+  @media (max-width: 767px) {
+    .main-footer__site-block {
+      max-height: 0;
+      min-height: 0;
+      overflow: hidden;
+      -webkit-transition: max-height 0.5s cubic-bezier(0.42, 0, 0.52, 1);
+      transition: max-height 0.5s cubic-bezier(0.42, 0, 0.52, 1); } }
+
 .main-footer__site-list {
   -webkit-column-count: 2;
      -moz-column-count: 2;
@@ -1748,6 +1762,9 @@ body {
       -webkit-column-gap: 0;
          -moz-column-gap: 0;
               column-gap: 0; } }
+  @media (max-width: 767px) {
+    .main-footer__site-list {
+      margin-top: 0; } }
 
 .main-footer__site-item {
   min-width: 243px; }
@@ -1814,7 +1831,12 @@ body {
     .main-footer__address-block {
       min-width: 272px;
       max-width: 272px;
-      margin-top: 30px; } }
+      margin-top: 0;
+      padding-top: 30px;
+      max-height: 0;
+      overflow: hidden;
+      -webkit-transition: max-height 0.5s cubic-bezier(0.42, 0, 0.52, 1);
+      transition: max-height 0.5s cubic-bezier(0.42, 0, 0.52, 1); } }
 
 .main-footer__address-block p {
   margin: 0;
@@ -1943,7 +1965,9 @@ body {
       display: -ms-flexbox;
       display: flex;
       position: relative;
-      margin-left: auto; }
+      margin-left: auto;
+      margin-right: 2px;
+      margin-top: 3px; }
       .main-footer__toggle::before {
         position: absolute;
         content: "";
@@ -1966,8 +1990,13 @@ body {
         display: none; } }
 
 @media (max-width: 767px) {
+  .main-footer__hide-block {
+    padding-top: 0; } }
+
+@media (max-width: 767px) {
   .main-footer__hide-block--js {
-    display: none; } }
+    max-height: 100%;
+    padding-top: 30px; } }
 
 .modal {
   position: fixed;

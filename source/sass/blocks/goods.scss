@@ -10,11 +10,11 @@
   }
 
   @include viewport--lg {
-    padding: 50px 3.12% 32px 3.12%;
+    padding: 50px 3.12% 30px 3.12%;
   }
 
   @include viewport--md {
-    padding: 53px 4.69% 33px 4.69%;
+    padding: 50px 4.69% 31px 4.69%;
   }
 }
 
@@ -54,7 +54,7 @@
   }
 
   @include viewport--md {
-    margin-top: 40px;
+    margin-top: 45px;
   }
 }
 

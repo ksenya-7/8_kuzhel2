@@ -13,14 +13,13 @@
   @include viewport--lg {
     width: 93.5%;
     min-height: 349px;
-    margin: 27px 3.12% 0 3.12%;
+    margin: 29px 3.12% 0 3%;
   }
 
   @include viewport--md {
-    // width: 90.62%;
     width: 290px;
     min-height: 478px;
-    margin: 36px auto 0 auto;
+    margin: 42px auto 0 auto;
   }
 }
 
@@ -52,7 +51,7 @@
   margin-left: 210px;
 
   @include viewport--lg {
-    margin-left: 26.2%;
+    margin-left: 26.25%;
   }
 
   @include viewport--md {

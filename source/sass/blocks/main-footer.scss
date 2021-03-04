@@ -47,7 +47,7 @@
   @include viewport--lg {
     flex-wrap: wrap;
     width: 93.8%;
-    margin: 17px 3% 0 3.1%;
+    margin: 17px 3% 25px 3.1%;
   }
 
   @include viewport--md {
@@ -181,6 +181,21 @@
   }
 }
 
+.main-footer__site-block {
+  max-height: 100%;
+
+  @include viewport--lg {
+    min-height: 175px;
+  }
+
+  @include viewport--md {
+    max-height: 0;
+    min-height: 0;
+    overflow: hidden;
+    transition: max-height $time-transition cubic-bezier(0.42, 0, 0.52, 1);
+  }
+}
+
 .main-footer__site-list {
   column-count: 2;
   column-gap: 65px;
@@ -197,6 +212,10 @@
   @include viewport--xl {
     column-count: 1;
     column-gap: 0;
+  }
+
+  @include viewport--md {
+    margin-top: 0;
   }
 }
 
@@ -274,7 +293,11 @@
   @include viewport--md {
     min-width: 272px;
     max-width: 272px;
-    margin-top: 30px;
+    margin-top: 0;
+    padding-top: 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $time-transition cubic-bezier(0.42, 0, 0.52, 1);
   }
 }
 
@@ -415,6 +438,8 @@
     display: flex;
     position: relative;
     margin-left: auto;
+    margin-right: 2px;
+    margin-top: 3px;
 
     &::before {
       position: absolute;
@@ -451,8 +476,15 @@
   }
 }
 
+.main-footer__hide-block {
+  @include viewport--md {
+    padding-top: 0;
+  }
+}
+
 .main-footer__hide-block--js {
   @include viewport--md {
-    display: none;
+    max-height: 100%;
+    padding-top: 30px;
   }
 }

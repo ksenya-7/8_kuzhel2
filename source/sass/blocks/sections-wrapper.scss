@@ -5,11 +5,11 @@
   overflow: hidden;
 
   @include viewport--lg {
-    min-height: 1110px;
+    min-height: 1112px;
   }
 
   @include viewport--md {
-    min-height: 1792px;
+    min-height: 1795px;
   }
 }
 
@@ -18,7 +18,7 @@
   top: 47px;
   left: -180px;
   width: 2071px;
-  height: 1111px;
+  min-height: 1111px;
   overflow: hidden;
 
   @include viewport--lg {
