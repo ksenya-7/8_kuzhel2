@@ -197,96 +197,16 @@ var initAccordion = function initAccordion() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formModalValidity", function() { return formModalValidity; });
-var MIN_TEXT_LENGTH = 3;
-var TEL_LENGTH = 17;
+/* harmony import */ var _validity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validity */ "./js/modules/validity.js");
+
 var textInput = document.querySelector('.modal__form input[type="text"]');
 var telInput = document.querySelector('.modal__form input[type="tel"]');
 var message = document.querySelector('.modal__form textarea');
 var buttonSubmit = document.querySelector('.modal__button');
 var form = document.querySelector('.modal form');
-var isStorageSupport = true;
-var storageText = '';
-var storageTel = '';
-var storageMessage = '';
-
-try {
-  storageText = localStorage.getItem('user-name');
-} catch (err) {
-  isStorageSupport = false;
-}
-
-try {
-  storageTel = localStorage.getItem('phone');
-} catch (err) {
-  isStorageSupport = false;
-}
-
-try {
-  storageMessage = localStorage.getItem('message');
-} catch (err) {
-  isStorageSupport = false;
-}
-
-if (isStorageSupport) {
-  storageText = localStorage.getItem('user-name', textInput.value);
-  storageTel = localStorage.getItem('phone', textInput.value);
-  storageMessage = localStorage.getItem('message', textInput.value);
-  textInput.value = storageText;
-  telInput.value = storageTel;
-  message.value = storageMessage;
-}
 
 var formModalValidity = function formModalValidity() {
-  if (buttonSubmit) {
-    buttonSubmit.addEventListener('click', function (evt) {
-      var isLengthOfText = true;
-      var isLengthOfTel = true;
-
-      if (textInput) {
-        var text = textInput.value;
-        isLengthOfText = text.length < MIN_TEXT_LENGTH;
-      }
-
-      if (telInput) {
-        var tel = telInput.value;
-        isLengthOfTel = tel.length !== TEL_LENGTH;
-      }
-
-      if (isLengthOfText) {
-        evt.preventDefault();
-        textInput.classList.add('js-invalid');
-      } else if (isLengthOfTel) {
-        evt.preventDefault();
-        telInput.classList.add('js-invalid');
-      } else {
-        textInput.classList.remove('js-invalid');
-        telInput.classList.remove('js-invalid');
-      }
-
-      textInput.reportValidity();
-      telInput.reportValidity();
-    });
-  }
-
-  form.addEventListener('submit', function (evt) {
-    textInput.focus();
-
-    if (!textInput.value || !telInput.value) {
-      evt.preventDefault();
-      textInput.classList.remove('js-invalid');
-      telInput.classList.remove('js-invalid');
-      textInput.offsetWidth = textInput.offsetWidth;
-      telInput.offsetWidth = telInput.offsetWidth;
-      textInput.classList.add('js-invalid');
-      telInput.classList.add('js-invalid');
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('user-name', textInput.value);
-        localStorage.setItem('phone', telInput.value);
-        localStorage.setItem('message', message.value);
-      }
-    }
-  });
+  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["validity"])(textInput, telInput, message, buttonSubmit, form);
 };
 
 
@@ -303,96 +223,16 @@ var formModalValidity = function formModalValidity() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formValidity", function() { return formValidity; });
-var MIN_TEXT_LENGTH = 3;
-var TEL_LENGTH = 17;
+/* harmony import */ var _validity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validity */ "./js/modules/validity.js");
+
 var textInput = document.querySelector('.feedback__form input[type="text"]');
 var telInput = document.querySelector('.feedback__form input[type="tel"]');
 var message = document.querySelector('.feedback__form textarea');
 var buttonSubmit = document.querySelector('.feedback__button');
 var form = document.querySelector('.feedback form');
-var isStorageSupport = true;
-var storageText = '';
-var storageTel = '';
-var storageMessage = '';
-
-try {
-  storageText = localStorage.getItem('user-name');
-} catch (err) {
-  isStorageSupport = false;
-}
-
-try {
-  storageTel = localStorage.getItem('phone');
-} catch (err) {
-  isStorageSupport = false;
-}
-
-try {
-  storageMessage = localStorage.getItem('message');
-} catch (err) {
-  isStorageSupport = false;
-}
-
-if (isStorageSupport) {
-  storageText = localStorage.getItem('user-name', textInput.value);
-  storageTel = localStorage.getItem('phone', textInput.value);
-  storageMessage = localStorage.getItem('message', textInput.value);
-  textInput.value = storageText;
-  telInput.value = storageTel;
-  message.value = storageMessage;
-}
 
 var formValidity = function formValidity() {
-  if (buttonSubmit) {
-    buttonSubmit.addEventListener('click', function (evt) {
-      var isLengthOfText = true;
-      var isLengthOfTel = true;
-
-      if (textInput) {
-        var text = textInput.value;
-        isLengthOfText = text.length < MIN_TEXT_LENGTH;
-      }
-
-      if (telInput) {
-        var tel = telInput.value;
-        isLengthOfTel = tel.length !== TEL_LENGTH;
-      }
-
-      if (isLengthOfText) {
-        evt.preventDefault();
-        textInput.classList.add('js-invalid');
-      } else if (isLengthOfTel) {
-        evt.preventDefault();
-        telInput.classList.add('js-invalid');
-      } else {
-        textInput.classList.remove('js-invalid');
-        telInput.classList.remove('js-invalid');
-      }
-
-      textInput.reportValidity();
-      telInput.reportValidity();
-    });
-  }
-
-  form.addEventListener('submit', function (evt) {
-    textInput.focus();
-
-    if (!textInput.value || !telInput.value) {
-      evt.preventDefault();
-      textInput.classList.remove('js-invalid');
-      telInput.classList.remove('js-invalid');
-      textInput.offsetWidth = textInput.offsetWidth;
-      telInput.offsetWidth = telInput.offsetWidth;
-      textInput.classList.add('js-invalid');
-      telInput.classList.add('js-invalid');
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('user-name', textInput.value);
-        localStorage.setItem('phone', telInput.value);
-        localStorage.setItem('message', message.value);
-      }
-    }
-  });
+  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["validity"])(textInput, telInput, message, buttonSubmit, form);
 };
 
 
@@ -531,6 +371,107 @@ var scroll = function scroll() {
       moveTo.registerTrigger(anchor);
     });
   }
+};
+
+
+
+/***/ }),
+
+/***/ "./js/modules/validity.js":
+/*!********************************!*\
+  !*** ./js/modules/validity.js ***!
+  \********************************/
+/*! exports provided: validity */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validity", function() { return validity; });
+var MIN_TEXT_LENGTH = 3;
+var TEL_LENGTH = 17;
+var isStorageSupport = true;
+var storageText = '';
+var storageTel = '';
+var storageMessage = '';
+
+var validity = function validity(text, tel, message, btn, form) {
+  try {
+    storageText = localStorage.getItem('user-name');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  try {
+    storageTel = localStorage.getItem('phone');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  try {
+    storageMessage = localStorage.getItem('message');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  if (isStorageSupport) {
+    storageText = localStorage.getItem('user-name', text.value);
+    storageTel = localStorage.getItem('phone', text.value);
+    storageMessage = localStorage.getItem('message', text.value);
+    text.value = storageText;
+    tel.value = storageTel;
+    message.value = storageMessage;
+  }
+
+  if (btn) {
+    btn.addEventListener('click', function (evt) {
+      var isLengthOfText = true;
+      var isLengthOfTel = true;
+
+      if (text) {
+        var nameUser = text.value;
+        isLengthOfText = nameUser.length < MIN_TEXT_LENGTH;
+      }
+
+      if (tel) {
+        var telUser = tel.value;
+        isLengthOfTel = telUser.length !== TEL_LENGTH;
+      }
+
+      if (isLengthOfText) {
+        evt.preventDefault();
+        text.classList.add('js-invalid');
+      } else if (isLengthOfTel) {
+        evt.preventDefault();
+        tel.classList.add('js-invalid');
+      } else {
+        text.classList.remove('js-invalid');
+        tel.classList.remove('js-invalid');
+      }
+
+      text.reportValidity();
+      tel.reportValidity();
+    });
+  }
+
+  form.addEventListener('submit', function (evt) {
+    text.focus();
+
+    if (!text.value || !tel.value) {
+      evt.preventDefault();
+      text.classList.remove('js-invalid');
+      tel.classList.remove('js-invalid');
+      text.offsetWidth = text.offsetWidth;
+      tel.offsetWidth = tel.offsetWidth;
+      text.classList.add('js-invalid');
+      tel.classList.add('js-invalid');
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('user-name', text.value);
+        localStorage.setItem('phone', tel.value);
+        localStorage.setItem('message', message.value);
+      }
+    }
+  });
 };
 
 
