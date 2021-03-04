@@ -3,7 +3,7 @@ const moveTo = new window.MoveTo({
   easing: 'easeOutQuart',
 });
 
-const scroll = () => {
+const initScroll = () => {
   const anchors = document.querySelectorAll('.js-trigger');
   if (anchors.length) {
     anchors.forEach((anchor) => {
@@ -12,4 +12,4 @@ const scroll = () => {
   }
 };
 
-export {scroll};
+export {initScroll};

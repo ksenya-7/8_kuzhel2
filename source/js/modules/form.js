@@ -6,8 +6,8 @@ const message = document.querySelector('.feedback__form textarea');
 const buttonSubmit = document.querySelector('.feedback__button');
 const form = document.querySelector('.feedback form');
 
-const formValidity = () => {
+const initFormValidity = () => {
   validity(textInput, telInput, message, buttonSubmit, form);
 };
 
-export {formValidity};
+export {initFormValidity};
