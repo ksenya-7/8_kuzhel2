@@ -114,12 +114,11 @@
   background-color: $color-fonbasic1;
   color: $color-fonbasic;
   border: none;
+  transition-duration: $time-transition;
 
   &:hover,
   &:focus {
-    outline: none;
-    border: 1px solid $color-fonbasic;
-    transition-duration: $time-transition;
+    outline: 1px solid $color-fonbasic;
   }
 }
 
@@ -140,13 +139,11 @@
   background-color: $color-fonbasic1;
   color: $color-fonbasic;
   border: none;
-  resize: none;
+  transition-duration: $time-transition;
 
   &:hover,
   &:focus {
-    outline: none;
-    border: 1px solid $color-fonbasic;
-    transition-duration: $time-transition;
+    outline: 1px solid $color-fonbasic;
   }
 }
 
@@ -164,9 +161,15 @@
 }
 
 .modal__field input {
-  appearance: none;
-  border: none;
-  outline: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .modal__field input:checked + label {
@@ -185,6 +188,7 @@
 
 .modal__field label {
   position: relative;
+  z-index: 100;
   display: flex;
   width: 90%;
 
@@ -193,12 +197,18 @@
 
   font-size: 14px;
   line-height: 16px;
-  color: $color-fonbasic;
-  opacity: 0.8;
+  color: $color-fonbasic8;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    cursor: pointer;
+  }
 
   &::before {
     content: "";
     position: absolute;
+    // z-index: 100;
     top: 8px;
     left: 0;
     width: 16px;

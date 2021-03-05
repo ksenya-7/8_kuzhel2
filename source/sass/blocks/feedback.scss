@@ -1,8 +1,12 @@
 .feedback {
   display: flex;
   position: relative;
-  padding: 92px 19.53% 113px 18.23%;
+  padding: 92px 375px 113px 350px;
   background-color: $color-stroke;
+
+  @include viewport--xxxl {
+    padding: 92px 19.53% 113px 18.23%;
+  }
 
   @include viewport--xxl {
     padding: 92px 11.2% 113px 12%;
@@ -21,10 +25,14 @@
   position: absolute;
   z-index: 1;
   top: 94px;
-  left: 10.21%;
+  left: 196px;
   width: 1801px;
   height: 517px;
   overflow: hidden;
+
+  @include viewport--xxl {
+    left: 10.21%;
+  }
 
   @include viewport--lg {
     display: none;
@@ -33,6 +41,7 @@
 
 .feedback__photo {
   z-index: 5;
+  width: 511px;
   margin-top: 69px;
 
   @include viewport--lg {
@@ -41,8 +50,13 @@
 }
 
 .feedback form {
-  margin-left: 9.5%;
+  margin-left: 114px;
+  width: 570px;
   z-index: 5;
+
+  @include viewport--xxl {
+    margin-left: 9.5%;
+  }
 
   @include viewport--lg {
     width: 100%;
@@ -113,9 +127,14 @@
 }
 
 .feedback__item {
-  width: 47.37%;
+  width: 270px;
   margin: 0;
-  margin-right: 5.26%;
+  margin-right: 30px;
+
+  @include viewport--xxl {
+    width: 47.37%;
+    margin-right: 5.26%;
+  }
 
   @include viewport--md {
     width: 100%;
@@ -135,6 +154,7 @@
   background-color: $color-fonbasic1;
   color: $color-fonbasic;
   border: none;
+  transition-duration: $time-transition;
 
   @include viewport--md {
     min-height: 52px;
@@ -143,9 +163,7 @@
 
   &:hover,
   &:focus {
-    outline: none;
-    border: 1px solid $color-fonbasic;
-    transition-duration: $time-transition;
+    outline: 1px solid $color-fonbasic;
   }
 }
 
@@ -165,7 +183,7 @@
   background-color: $color-fonbasic1;
   color: $color-fonbasic;
   border: none;
-  resize: none;
+  transition-duration: $time-transition;
 
   @include viewport--lg {
     min-height: 160px;
@@ -179,9 +197,7 @@
 
   &:hover,
   &:focus {
-    outline: none;
-    border: 1px solid $color-fonbasic;
-    transition-duration: $time-transition;
+    outline: 1px solid $color-fonbasic;
   }
 }
 
@@ -209,9 +225,15 @@
 }
 
 .feedback__wrapper input {
-  appearance: none;
-  border: none;
-  outline: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .feedback__wrapper input:checked + label {
@@ -237,8 +259,7 @@
 
   font-size: 14px;
   line-height: 16px;
-  color: $color-fonbasic;
-  opacity: 0.8;
+  color: $color-fonbasic8;
 
   @include viewport--lg {
     margin-left: 41px;
@@ -249,6 +270,12 @@
     margin-top: 24px;
     margin-left: 0;
     padding-left: 34px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    cursor: pointer;
   }
 
   &::before {

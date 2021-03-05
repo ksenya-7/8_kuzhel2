@@ -8,7 +8,7 @@ const closeLists = () => {
   });
 };
 
-const deactiveToggles = () => {
+const deactivateToggles = () => {
   toggles.forEach((element) => {
     element.classList.remove('main-footer__toggle--active');
   });
@@ -21,7 +21,7 @@ const toggleBlock = (block, toggle) => {
 
 const initAccordion = () => {
   closeLists();
-  deactiveToggles();
+  deactivateToggles();
   for (let i = 0; i < toggles.length; i++) {
     toggles[i].classList.remove('main-footer__toggle--nojs');
 
@@ -31,7 +31,7 @@ const initAccordion = () => {
         toggleBlock(blocks[i], toggles[i]);
       } else {
         closeLists();
-        deactiveToggles();
+        deactivateToggles();
         const maxHeight = blocks[i].style.maxHeight;
         blocks[i].style.maxHeight = (maxHeight) ? null : blocks[i].scrollHeight + 'px';
         toggleBlock(blocks[i], toggles[i]);

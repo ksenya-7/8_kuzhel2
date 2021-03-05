@@ -5,6 +5,7 @@
 
   width: 100%;
   min-height: 878px;
+  background-color: $color-section;
 
   @include viewport--lg {
     min-height: 686px;
@@ -98,11 +99,16 @@
 
 .main-header__top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   z-index: 1;
-  width: 73.5%;
-  margin: 33px 13.33% 0 13.18%;
+  width: 1411px;
+  margin: 33px auto 0 auto;
+
+  @include viewport--xxxl {
+    width: 73.5%;
+    margin: 33px 13.33% 0 13.18%;
+  }
 
   @include viewport--xl {
     width: 93.75%;
@@ -148,14 +154,20 @@
   list-style: none;
   max-width: 470px;
   margin: 0;
-  padding: 0;
   margin-left: auto;
+  padding: 0;
+  padding-top: 15px;
+
+  @include viewport--md {
+    padding-top: 7px;
+  }
 }
 
 .main-header__item {
   display: flex;
   align-items: center;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .main-header__item:nth-child(2n) {
@@ -172,12 +184,12 @@
 
 .main-header__link {
   display: flex;
+  transition-duration: $time-transition;
 
   &:hover,
   &:focus {
     outline: none;
     opacity: 0.5;
-    transition-duration: $time-transition;
   }
 }
 
@@ -204,6 +216,7 @@
 
 .main-header__button {
   margin-left: 50px;
+  margin-top: 3px;
   color: $color-fonbasic;
   border: 1px solid $color-fonbasic;
 

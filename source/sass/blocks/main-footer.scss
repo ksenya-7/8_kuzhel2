@@ -36,8 +36,13 @@
 
 .main-footer__wrapper {
   display: flex;
-  width: 73.5%;
-  margin: 65px 13.33% 0 13.18%;
+  width: 1411px;
+  margin: 65px auto 0 auto;
+
+  @include viewport--xxxl {
+    width: 73.5%;
+    margin: 65px 13.33% 0 13.18%;
+  }
 
   @include viewport--xl {
     width: 93.88%;
@@ -116,13 +121,13 @@
 
 .main-footer__header-item a {
   display: block;
+  transition-duration: $time-transition;
 
   &:hover,
   &:focus {
     outline: none;
     cursor: pointer;
     opacity: 0.5;
-    transition-duration: $time-transition;
   }
 }
 
@@ -131,11 +136,19 @@
 }
 
 .main-footer__site-section {
-  margin-left: 14.6%;
+  margin-left: 206px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // flex-direction: column;
+
+  @include viewport--xxxl {
+    margin-left: 14.6%;
+  }
 
   @include viewport--lg {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
     max-width: 243px;
     margin-top: 61px;
     margin-left: 0;
@@ -152,14 +165,18 @@
 }
 
 .main-footer__site-block {
-  max-height: 100%;
+  max-height: 1000px;
+  display: flex;
+  height: auto;
 
   @include viewport--xl {
     min-height: 175px;
+    max-height: 1000px;
   }
 
   @include viewport--lg {
     min-height: 175px;
+    max-height: 1000px;
   }
 
   @include viewport--md {
@@ -198,11 +215,12 @@
 }
 
 .main-footer__site-item a {
+  transition-duration: $time-transition;
+
   &:hover,
   &:focus {
     outline: none;
     opacity: 0.5;
-    transition-duration: $time-transition;
   }
 }
 
@@ -211,11 +229,11 @@
 }
 
 .main-footer__address-section {
-  max-width: 333px;
-  margin-left: auto;
+  min-width: 333px;
+  margin-left: 102px;
 
   @include viewport--xxl {
-    min-width: 333px;
+    margin-left: auto;
   }
 
   @include viewport--xl {
@@ -223,7 +241,7 @@
   }
 
   @include viewport--lg {
-    min-width: 345px;
+    min-width: 344px;
     margin-top: 61px;
   }
 
@@ -255,14 +273,20 @@
   }
 
   @include viewport--md {
-    min-width: 90%;
+    // min-width: 90%;
+    width: 150px;
     margin-left: 0;
   }
 }
 
 .main-footer__address-block {
   width: 100%;
+  max-height: 1000px;
   margin-top: 24px;
+
+  @include viewport--lg {
+    margin-top: 27px;
+  }
 
   @include viewport--md {
     min-width: 272px;
@@ -277,21 +301,38 @@
 
 .main-footer__address-block p {
   margin: 0;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.main-footer__address-block a {
+  margin: 0;
+  padding: 0;
 
   font-size: 15px;
   line-height: 25px;
   color: $color-title;
   opacity: 0.5;
+  transition-duration: $time-transition;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    cursor: pointer;
+    opacity: 0.25;
+  }
 }
 
 .main-footer__right-section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
+  width: 1411px;
   min-height: 52px;
-  margin-top: 55px;
-  padding: 19px 13.33% 14px 13.18%;
+  margin: 55px auto 0;
+  padding: 14px 0 14px 0;
 
   font-size: 13px;
   line-height: 24px;
@@ -302,14 +343,19 @@
 
   border-top: 1px solid $color-line;
 
+  @include viewport--xxxl {
+    width: 73.48%;
+  }
+
   @include viewport--xl {
-    padding: 14px 3% 14px 3.2%;
+    width: 93.35%;
     font-size: 12px;
   }
 
   @include viewport--lg {
     min-height: 69px;
-    margin-top: 37px;
+    width: 100%;
+    margin-top: 13px;
     padding: 21px 3.3% 24px 3%;
     font-size: 13px;
   }
@@ -343,17 +389,22 @@
 }
 
 .main-footer__right-section a {
+  transition-duration: $time-transition;
+
   &:hover,
   &:focus {
     outline: none;
     cursor: pointer;
     opacity: 0.5;
-    transition-duration: $time-transition;
   }
 }
 
 .main-footer__conditions {
-  margin-left: 10.25%;
+  margin-left: 142px;
+
+  @include viewport--xxxl {
+    margin-left: 10.25%;
+  }
 
   @include viewport--lg {
     margin-left: 3px;
@@ -409,7 +460,7 @@
 
 
   @include viewport--md {
-    display: flex;
+    display: block;
     position: relative;
     margin-left: auto;
     margin-right: 2px;
@@ -430,16 +481,16 @@
       cursor: pointer;
     }
 
-    span:nth-child(1) {
+    .main-footer__btn-close {
       display: none;
     }
 
     &--active {
-      span:nth-child(1) {
+      .main-footer__btn-close {
         display: flex;
       }
 
-      span:nth-child(2) {
+      .main-footer__btn-open {
         display: none;
       }
     }

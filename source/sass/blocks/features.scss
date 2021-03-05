@@ -1,8 +1,12 @@
 .features {
   position: relative;
-  width: 60.94%;
+  width: 1170px;
   margin: 0 auto;
   padding-top: 112px;
+
+  @include viewport--xxxl {
+    width: 60.94%;
+  }
 
   @include viewport--xl {
     width: 90.62%;
@@ -33,15 +37,21 @@
   flex-direction: column;
   position: relative;
 
-  width: 48.71%;
+  width: 570px;
   min-height: 299px;
   margin: 0;
-  margin-right: 2.56%;
+  margin-right: 30px;
   margin-bottom: 30px;
   padding: 44px 43px 44px 42px;
 
   background-color: $color-fonbasic;
   border: 1px solid $color-border;
+
+
+  @include viewport--xxxl {
+    width: 48.71%;
+    margin-right: 2.56%;
+  }
 
   @include viewport--lg {
     width: 47.9%;
@@ -68,6 +78,7 @@
     width: 3px;
     height: calc(100% + 2px);
     background-color: $color-stroke;
+    transition-duration: $time-transition;
   }
 
   &:hover,
@@ -75,7 +86,6 @@
     outline: none;
     color: $color-fonbasic;
     background-color: $color-stroke;
-    transition-duration: $time-transition;
 
     svg,
     h3 {

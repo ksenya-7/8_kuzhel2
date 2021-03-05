@@ -1,9 +1,15 @@
 .about-company {
   display: flex;
   position: relative;
-  width: 62.19%;
+  width: 1194px;
   min-height: 317px;
-  margin: 77px 19.84% 0 17.97%;
+  margin: 77px 381px 0 345px;
+
+  @include viewport--xxxl {
+    width: 62.19%;
+    min-height: 317px;
+    margin: 77px 19.84% 0 17.97%;
+  }
 
   @include viewport--xl {
     width: 93.5%;
@@ -98,6 +104,7 @@
   margin-top: 41px;
   color: $color-stroke;
   border: 1px solid $color-stroke;
+  margin-bottom: 20px;
 
   @include viewport--lg {
     margin-top: 39px;

@@ -146,7 +146,7 @@ var closeLists = function closeLists() {
   });
 };
 
-var deactiveToggles = function deactiveToggles() {
+var deactivateToggles = function deactivateToggles() {
   toggles.forEach(function (element) {
     element.classList.remove('main-footer__toggle--active');
   });
@@ -159,7 +159,7 @@ var toggleBlock = function toggleBlock(block, toggle) {
 
 var initAccordion = function initAccordion() {
   closeLists();
-  deactiveToggles();
+  deactivateToggles();
 
   var _loop = function _loop(i) {
     toggles[i].classList.remove('main-footer__toggle--nojs');
@@ -170,7 +170,7 @@ var initAccordion = function initAccordion() {
         toggleBlock(blocks[i], toggles[i]);
       } else {
         closeLists();
-        deactiveToggles();
+        deactivateToggles();
         var maxHeight = blocks[i].style.maxHeight;
         blocks[i].style.maxHeight = maxHeight ? null : blocks[i].scrollHeight + 'px';
         toggleBlock(blocks[i], toggles[i]);
