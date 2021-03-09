@@ -471,78 +471,80 @@
           <h2 class="visually-hidden">
             Форма для получения бесплатной консультации
           </h2>
-          <svg width="1801" height="517" viewBox="0 0 1801.26 517.4">
-            <use xlink:href="#form-bg"></use>
-          </svg>
-          <div class="feedback__photo">
-            <!-- 1х: 511px; 2x: 1022px -->
-            <img
-              width="511"
-              height="288"
-              src="img/content/paper-airplane_1x.png"
-              srcset="img/content/paper-airplane_2x.png 2x"
-              alt="бумажный самолётик"
-              loading="lazy"
-            />
-          </div>
-
-          <form action="https://echo.htmlacademy.ru" method="get">
-            <div class="feedback__form">
-              <h3>Остались вопросы? Задайте их нам!</h3>
-              <p>Мы проконсультируем Вас бесплатно</p>
-              <ul class="feedback__list">
-                <li class="feedback__item">
-                  <!-- класс js-invalid делает border красным -->
-                  <input
-                    id="user-name"
-                    type="text"
-                    name="user-name"
-                    placeholder="Имя"
-                    minlength="3"
-                    aria-label="поле для ввода имени пользователя"
-                    required
-                  />
-                </li>
-                <li class="feedback__item">
-                  <!-- класс js-invalid делает border красным -->
-                  <input
-                    data-type="tel"
-                    id="user-tel"
-                    type="tel"
-                    name="user-tel"
-                    placeholder="Телефон"
-                    aria-label="поле для ввода телефона пользователя"
-                    required
-                  />
-                </li>
-              </ul>
-              <textarea
-                name="message"
-                rows="4"
-                placeholder="Ваш вопрос"
-                contenteditable="true"
-                aria-label="поле для вопроса"
-              ></textarea>
-              <div class="feedback__wrapper">
-                <button
-                  class="btn feedback__button"
-                  type="submit"
-                  aria-label="отправить вопрос"
-                >
-                  Задать вопрос
-                </button>
-                <input
-                  id="user-checkbox"
-                  type="checkbox"
-                  name="user-checkbox"
-                  checked
-                />
-                <label for="user-checkbox"
-                  >Я согласен на обработку персональных данных</label
-                >
-              </div>
+          <div class="feedback__wrapper">
+            <svg width="1801" height="517" viewBox="0 0 1801.26 517.4">
+              <use xlink:href="#form-bg"></use>
+            </svg>
+            <div class="feedback__photo">
+              <!-- 1х: 511px; 2x: 1022px -->
+              <img
+                width="511"
+                height="288"
+                src="img/content/paper-airplane_1x.png"
+                srcset="img/content/paper-airplane_2x.png 2x"
+                alt="бумажный самолётик"
+                loading="lazy"
+              />
             </div>
-          </form>
+
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <div class="feedback__form">
+                <h3>Остались вопросы? Задайте их нам!</h3>
+                <p>Мы проконсультируем Вас бесплатно</p>
+                <ul class="feedback__list">
+                  <li class="feedback__item">
+                    <!-- класс js-invalid делает border красным -->
+                    <input
+                      id="user-name"
+                      type="text"
+                      name="user-name"
+                      placeholder="Имя"
+                      minlength="3"
+                      aria-label="поле для ввода имени пользователя"
+                      required
+                    />
+                  </li>
+                  <li class="feedback__item">
+                    <!-- класс js-invalid делает border красным -->
+                    <input
+                      data-type="tel"
+                      id="user-tel"
+                      type="tel"
+                      name="user-tel"
+                      placeholder="Телефон"
+                      aria-label="поле для ввода телефона пользователя"
+                      required
+                    />
+                  </li>
+                </ul>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Ваш вопрос"
+                  contenteditable="true"
+                  aria-label="поле для вопроса"
+                ></textarea>
+                <div class="feedback__field">
+                  <button
+                    class="btn feedback__button"
+                    type="submit"
+                    aria-label="отправить вопрос"
+                  >
+                    Задать вопрос
+                  </button>
+                  <input
+                    id="user-checkbox"
+                    type="checkbox"
+                    name="user-checkbox"
+                    checked
+                  />
+                  <label for="user-checkbox"
+                    >Я согласен на обработку персональных данных</label
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
         </section>
       </main>
 
@@ -665,21 +667,21 @@
               <p>г. Мытищи, Олимпийский проспект, д.10</p>
               <a
                 href="tel:+74955894050"
-                class="main-header__link"
+                class="main-footer__link"
                 aria-label="телефон компании"
               >
                 +7 (495) 589-40-50
               </a>
               <a
                 href="tel:+79250038767"
-                class="main-header__link"
+                class="main-footer__link"
                 aria-label="телефон компании"
               >
                 +7 (925) 003-87-67
               </a>
               <a
                 href="tel:+79269268079"
-                class="main-header__link"
+                class="main-footer__link"
                 aria-label="телефон компании"
               >
                 +7 (926) 926-80-79
@@ -711,7 +713,7 @@
       <div class="modal">
         <div class="modal__wrapper">
           <div class="modal__overlay"></div>
-          <div class="modal__callback">
+          <div class="modal__content">
             <button
               class="modal__close-btn"
               type="button"
@@ -722,63 +724,61 @@
               </svg>
             </button>
             <form action="https://echo.htmlacademy.ru" method="get">
-              <div class="modal__form">
-                <h3>Закажите звонок</h3>
-                <p>
-                  Оставьте контакты, мы проконсультируем вас бесплатно в удобное
-                  время
-                </p>
-                <ul class="modal__list">
-                  <li class="modal__item">
-                    <!-- класс js-invalid делает border красным -->
-                    <input
-                      id="modal-user-name"
-                      type="text"
-                      name="user-name"
-                      placeholder="Имя"
-                      minlength="3"
-                      aria-label="поле для ввода имени пользователя"
-                      required
-                    />
-                  </li>
-                  <li class="modal__item">
-                    <!-- класс js-invalid делает border красным -->
-                    <input
-                      data-type="tel"
-                      id="modal-user-tel"
-                      type="tel"
-                      name="user-tel"
-                      placeholder="Телефон"
-                      aria-label="поле для ввода телефона пользователя"
-                      required
-                    />
-                  </li>
-                </ul>
-                <textarea
-                  name="modal-message"
-                  rows="4"
-                  placeholder="Ваш вопрос"
-                  contenteditable="true"
-                  aria-label="поле для вопроса"
-                ></textarea>
-                <button
-                  class="btn modal__button"
-                  type="submit"
-                  aria-label="отправить вопрос"
-                >
-                  Отправить
-                </button>
-                <div class="modal__field">
+              <h3>Закажите звонок</h3>
+              <p>
+                Оставьте контакты, мы проконсультируем вас бесплатно в удобное
+                время
+              </p>
+              <ul class="modal__list">
+                <li class="modal__item">
+                  <!-- класс js-invalid делает border красным -->
                   <input
-                    id="modal-user-checkbox"
-                    type="checkbox"
-                    name="user-checkbox"
-                    checked
+                    id="modal-user-name"
+                    type="text"
+                    name="user-name"
+                    placeholder="Имя"
+                    minlength="3"
+                    aria-label="поле для ввода имени пользователя"
+                    required
                   />
-                  <label for="modal-user-checkbox"
-                    >Я согласен на обработку персональных данных</label
-                  >
-                </div>
+                </li>
+                <li class="modal__item">
+                  <!-- класс js-invalid делает border красным -->
+                  <input
+                    data-type="tel"
+                    id="modal-user-tel"
+                    type="tel"
+                    name="user-tel"
+                    placeholder="Телефон"
+                    aria-label="поле для ввода телефона пользователя"
+                    required
+                  />
+                </li>
+              </ul>
+              <textarea
+                name="modal-message"
+                rows="4"
+                placeholder="Ваш вопрос"
+                contenteditable="true"
+                aria-label="поле для вопроса"
+              ></textarea>
+              <button
+                class="btn modal__button"
+                type="submit"
+                aria-label="отправить вопрос"
+              >
+                Отправить
+              </button>
+              <div class="modal__field">
+                <input
+                  id="modal-user-checkbox"
+                  type="checkbox"
+                  name="user-checkbox"
+                  checked
+                />
+                <label for="modal-user-checkbox"
+                  >Я согласен на обработку персональных данных</label
+                >
               </div>
             </form>
           </div>

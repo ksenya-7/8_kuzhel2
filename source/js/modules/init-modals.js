@@ -2,7 +2,7 @@ import {setupModal} from '../utils/modal';
 
 const modal = document.querySelector('.modal');
 const modalBtns = document.querySelectorAll('.main-header__button');
-const textInput = document.querySelector('.modal__form input[type="text"]');
+const textInput = document.querySelector('.modal__content input[type="text"]');
 
 const focusTextInput = () => {
   textInput.focus();

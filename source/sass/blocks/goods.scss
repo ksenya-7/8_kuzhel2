@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 89px 375px 109px 375px;
+  padding: 89px 19.53% 109px 19.53%;
   background-color: $color-background;
 
   @include viewport--xxxl {
@@ -148,7 +148,9 @@
   &:focus {
     outline: none;
 
-    img, h3, .goods__icon {
+    img,
+    h3,
+    .goods__icon {
       opacity: 0.5;
     }
   }

@@ -199,9 +199,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initFormModalValidity", function() { return initFormModalValidity; });
 /* harmony import */ var _validity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validity */ "./js/modules/validity.js");
 
-var textInput = document.querySelector('.modal__form input[type="text"]');
-var telInput = document.querySelector('.modal__form input[type="tel"]');
-var message = document.querySelector('.modal__form textarea');
+var textInput = document.querySelector('.modal__content input[type="text"]');
+var telInput = document.querySelector('.modal__content input[type="tel"]');
+var message = document.querySelector('.modal__content textarea');
 var buttonSubmit = document.querySelector('.modal__button');
 var form = document.querySelector('.modal form');
 
@@ -253,7 +253,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var modal = document.querySelector('.modal');
 var modalBtns = document.querySelectorAll('.main-header__button');
-var textInput = document.querySelector('.modal__form input[type="text"]');
+var textInput = document.querySelector('.modal__content input[type="text"]');
 
 var focusTextInput = function focusTextInput() {
   textInput.focus();

@@ -21,17 +21,32 @@
   }
 }
 
+.feedback__wrapper {
+  display: flex;
+  max-width: 1195px;
+  margin: 0 auto;
+
+  @include viewport--lg {
+    min-width: 591px;
+  }
+
+  @include viewport--md {
+    min-width: 290px;
+  }
+}
+
 .feedback svg {
   position: absolute;
   z-index: 1;
   top: 94px;
-  left: 196px;
+  left: 50%;
+  transform: translateX(-42.5%);
   width: 1801px;
   height: 517px;
   overflow: hidden;
 
-  @include viewport--xxl {
-    left: 10.21%;
+  @include viewport--xl {
+    transform: translateX(-35%);
   }
 
   @include viewport--lg {
@@ -56,6 +71,7 @@
 
   @include viewport--xxl {
     margin-left: 9.5%;
+    width: 47.7%;
   }
 
   @include viewport--lg {
@@ -209,7 +225,7 @@
   color: $color-fonbasic;
 }
 
-.feedback__wrapper {
+.feedback__field {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -224,7 +240,7 @@
   }
 }
 
-.feedback__wrapper input {
+.feedback__field input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -236,7 +252,7 @@
   overflow: hidden;
 }
 
-.feedback__wrapper input:checked + label {
+.feedback__field input:checked + label {
   &::after {
     content: "";
     position: absolute;
@@ -250,7 +266,7 @@
   }
 }
 
-.feedback__wrapper label {
+.feedback__field label {
   position: relative;
   width: 40.35%;
   margin-left: 38px;
@@ -261,8 +277,16 @@
   line-height: 16px;
   color: $color-fonbasic8;
 
+  @include viewport--xl {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
   @include viewport--lg {
+    width: 40.35%;
     margin-left: 41px;
+    margin-top: 0;
   }
 
   @include viewport--md {
@@ -290,9 +314,22 @@
 }
 
 .feedback__button {
-  width: 47.37%;
+  width: 270px;
   color: $color-fonbasic;
   border: 1px solid $color-fonbasic;
+
+  @include viewport--xxxl {
+    width: 46%;
+  }
+
+  @include viewport--xl {
+    width: 100%;
+  }
+
+  @include viewport--lg {
+    width: 47.37%;
+    max-height: 47px;
+  }
 
   @include viewport--md {
     width: 100%;

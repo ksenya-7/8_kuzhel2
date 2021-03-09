@@ -3,12 +3,11 @@
   position: relative;
   width: 1194px;
   min-height: 317px;
-  margin: 77px 381px 0 345px;
+  margin: 77px auto 0 auto;
+  padding-left: 37px;
 
   @include viewport--xxxl {
     width: 62.19%;
-    min-height: 317px;
-    margin: 77px 19.84% 0 17.97%;
   }
 
   @include viewport--xl {
@@ -26,13 +25,14 @@
     width: 290px;
     min-height: 478px;
     margin: 42px auto 0 auto;
+    padding-left: 0;
   }
 }
 
 .about-company__year {
   position: absolute;
   top: 5px;
-  left: 0;
+  left: -18px;
 
   @include viewport--lg {
     top: -4px;
@@ -54,10 +54,10 @@
 .about-company__info {
   display: flex;
   flex-direction: column;
-  margin-left: 210px;
+  margin-left: 155px;
 
   @include viewport--lg {
-    margin-left: 26.25%;
+    margin-left: 22.25%;
   }
 
   @include viewport--md {

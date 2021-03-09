@@ -197,16 +197,9 @@
   opacity: 0.5;
 
   @include viewport--xl {
-    column-count: 1;
-    column-gap: 0;
-  }
-
-  @include viewport--lg {
     display: flex;
     flex-direction: column;
   }
-
-
 
   @include viewport--md {
     width: 100%;
@@ -290,6 +283,8 @@
 
 .main-footer__address-block {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   max-height: 1000px;
   margin-top: 24px;
 
@@ -340,7 +335,7 @@
   align-items: center;
   width: 1411px;
   min-height: 52px;
-  margin: 65px auto 0;
+  margin: 55px auto 0;
   padding: 14px 0 14px 0;
 
   font-size: 13px;

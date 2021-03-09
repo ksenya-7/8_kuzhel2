@@ -1,8 +1,8 @@
 import {initValidity} from './validity';
 
-const textInput = document.querySelector('.modal__form input[type="text"]');
-const telInput = document.querySelector('.modal__form input[type="tel"]');
-const message = document.querySelector('.modal__form textarea');
+const textInput = document.querySelector('.modal__content input[type="text"]');
+const telInput = document.querySelector('.modal__content input[type="tel"]');
+const message = document.querySelector('.modal__content textarea');
 const buttonSubmit = document.querySelector('.modal__button');
 const form = document.querySelector('.modal form');
 
