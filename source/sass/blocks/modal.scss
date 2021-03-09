@@ -17,8 +17,8 @@
   pointer-events: none;
 
   transition: opacity $time-transition,
-  transform $time-transition,
-  visibility $time-transition;
+    transform $time-transition,
+    visibility $time-transition;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
