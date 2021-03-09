@@ -331,7 +331,9 @@ template {
   text-transform: uppercase;
   border-radius: 5px;
   background-color: transparent;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
   .btn:hover, .btn:focus {
     outline: none;
     opacity: 0.5; }
@@ -1959,7 +1961,7 @@ body {
           align-items: center;
   width: 1411px;
   min-height: 52px;
-  margin: 55px auto 0;
+  margin: 65px auto 0;
   padding: 14px 0 14px 0;
   font-size: 13px;
   line-height: 24px;
