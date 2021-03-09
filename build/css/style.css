@@ -1656,7 +1656,6 @@ body {
           flex-direction: column;
   position: relative;
   width: 100%;
-  min-height: 316px;
   margin-top: auto; }
   @media (max-width: 1023px) {
     .main-footer {
@@ -1966,7 +1965,7 @@ body {
     opacity: 0.25; }
 
 .main-footer__right-section {
-  margin-top: 55px;
+  margin-top: 65px;
   border-top: 1px solid rgba(98, 105, 98, 0.2); }
   @media (max-width: 1023px) {
     .main-footer__right-section {

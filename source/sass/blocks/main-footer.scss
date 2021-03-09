@@ -5,7 +5,7 @@
   position: relative;
 
   width: 100%;
-  min-height: 316px;
+  // min-height: 316px;
   margin-top: auto;
 
   @include viewport--lg {
@@ -330,7 +330,7 @@
 }
 
 .main-footer__right-section {
-  margin-top: 55px;
+  margin-top: 65px;
   border-top: 1px solid $color-line;
 
   @include viewport--lg {
