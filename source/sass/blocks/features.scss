@@ -46,6 +46,8 @@
 
   background-color: $color-fonbasic;
   border: 1px solid $color-border;
+  transition: background-color $transition-base,
+    color $transition-base;
 
   @include viewport--xxxl {
     width: 48.71%;
@@ -77,7 +79,6 @@
     width: 3px;
     height: calc(100% + 2px);
     background-color: $color-stroke;
-    transition-duration: $time-transition;
   }
 
   &:hover,

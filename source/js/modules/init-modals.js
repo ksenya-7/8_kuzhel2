@@ -1,16 +1,16 @@
 import {setupModal} from '../utils/modal';
 
 const modal = document.querySelector('.modal');
-const modalBtns = document.querySelectorAll('.main-header__button');
-const textInput = document.querySelector('.modal__content input[type="text"]');
+const modalButtons = document.querySelectorAll('.main-header__button');
+const textInput = document.querySelector('.modal__content input[id="modal-user-name"]');
 
 const focusTextInput = () => {
   textInput.focus();
 };
 
 const initModals = () => {
-  if (modal && modalBtns.length) {
-    setupModal(modal, false, modalBtns, focusTextInput, false);
+  if (modal && modalButtons.length) {
+    setupModal(modal, false, modalButtons, focusTextInput, false);
   }
 };
 

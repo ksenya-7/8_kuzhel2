@@ -16,9 +16,9 @@
   opacity: 0;
   pointer-events: none;
 
-  transition: opacity $time-transition,
-    transform $time-transition,
-    visibility $time-transition;
+  transition: opacity $transition-base,
+    transform $transition-base,
+    visibility $transition-base;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -80,6 +80,13 @@
   cursor: pointer;
 
   background-color: transparent;
+  transition: opacity $transition-base;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
 }
 
 .modal__content h3 {
@@ -121,11 +128,12 @@
   background-color: $color-fonbasic1;
   color: $color-fonbasic;
   border: none;
-  transition-duration: $time-transition;
+  transition: box-shadow $transition-base;
 
   &:hover,
   &:focus {
-    outline: 1px solid $color-fonbasic;
+    box-shadow: 0 0 0 1px $color-fonbasic;
+    outline: none;
   }
 }
 
@@ -146,11 +154,12 @@
   background-color: $color-fonbasic1;
   color: $color-fonbasic;
   border: none;
-  transition-duration: $time-transition;
+  transition: box-shadow $transition-base;
 
   &:hover,
   &:focus {
-    outline: 1px solid $color-fonbasic;
+    box-shadow: 0 0 0 1px $color-fonbasic;
+    outline: none;
   }
 }
 
@@ -233,4 +242,8 @@
 
 .modal__item .js-invalid {
   border: 1px solid $color-invalid;
+}
+
+label.js-unchecked {
+  color: $color-invalid;
 }

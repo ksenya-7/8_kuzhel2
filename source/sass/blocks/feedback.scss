@@ -170,7 +170,7 @@
   background-color: $color-fonbasic1;
   color: $color-fonbasic;
   border: none;
-  transition-duration: $time-transition;
+  transition: box-shadow $transition-base;
 
   @include viewport--md {
     min-height: 52px;
@@ -179,7 +179,8 @@
 
   &:hover,
   &:focus {
-    outline: 1px solid $color-fonbasic;
+    box-shadow: 0 0 0 1px $color-fonbasic;
+    outline: none;
   }
 }
 
@@ -199,7 +200,7 @@
   background-color: $color-fonbasic1;
   color: $color-fonbasic;
   border: none;
-  transition-duration: $time-transition;
+  transition: box-shadow $transition-base;
 
   @include viewport--lg {
     min-height: 160px;
@@ -213,7 +214,8 @@
 
   &:hover,
   &:focus {
-    outline: 1px solid $color-fonbasic;
+    box-shadow: 0 0 0 1px $color-fonbasic;
+    outline: none;
   }
 }
 
@@ -338,4 +340,8 @@
 
 .feedback__item .js-invalid {
   border: 1px solid $color-invalid;
+}
+
+label.js-unchecked {
+  color: $color-invalid;
 }

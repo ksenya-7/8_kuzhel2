@@ -172,7 +172,7 @@
 }
 
 .goods__link {
-  transition-duration: $time-transition;
+  transition: opacity $transition-base;
 
   &:hover,
   &:focus {

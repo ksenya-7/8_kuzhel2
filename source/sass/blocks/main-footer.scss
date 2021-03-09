@@ -5,7 +5,6 @@
   position: relative;
 
   width: 100%;
-  // min-height: 316px;
   margin-top: auto;
 
   @include viewport--lg {
@@ -121,7 +120,7 @@
 
 .main-footer__header-item a {
   display: block;
-  transition-duration: $time-transition;
+  transition: opacity $transition-base;
 
   &:hover,
   &:focus {
@@ -179,7 +178,7 @@
     max-height: 0;
     min-height: 0;
     overflow: hidden;
-    transition: max-height $time-transition cubic-bezier(0.42, 0, 0.52, 1);
+    transition: max-height $transition-base;
   }
 }
 
@@ -212,7 +211,7 @@
 }
 
 .main-footer__site-item a {
-  transition-duration: $time-transition;
+  transition: opacity $transition-base;
 
   &:hover,
   &:focus {
@@ -251,7 +250,6 @@
     padding: 26px 15px 22px 15px;
   }
 }
-
 
 .main-footer__menu {
   display: flex;
@@ -299,7 +297,7 @@
     padding-top: 30px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height $time-transition cubic-bezier(0.42, 0, 0.52, 1);
+    transition: max-height $transition-base;
   }
 }
 
@@ -319,7 +317,7 @@
   line-height: 25px;
   color: $color-title;
   opacity: 0.5;
-  transition-duration: $time-transition;
+  transition: opacity $transition-base;
 
   &:hover,
   &:focus {
@@ -330,7 +328,7 @@
 }
 
 .main-footer__right-section {
-  margin-top: 65px;
+  margin-top: 60px;
   border-top: 1px solid $color-line;
 
   @include viewport--lg {
@@ -403,7 +401,7 @@
 }
 
 .main-footer__right-section a {
-  transition-duration: $time-transition;
+  transition: opacity $transition-base;
 
   &:hover,
   &:focus {
@@ -509,7 +507,7 @@
       }
     }
 
-    &--nojs {
+    &--no-js {
       display: none;
     }
   }

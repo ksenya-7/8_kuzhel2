@@ -138,6 +138,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initAccordion", function() { return initAccordion; });
 var toggles = document.querySelectorAll('.main-footer__toggle.main-footer__toggle');
 var blocks = document.querySelectorAll('.main-footer__hide-block');
+var breakpointLg = window.matchMedia('(max-width: 768px)');
 
 var closeLists = function closeLists() {
   blocks.forEach(function (element) {
@@ -158,28 +159,34 @@ var toggleBlock = function toggleBlock(block, toggle) {
 };
 
 var initAccordion = function initAccordion() {
-  closeLists();
-  deactivateToggles();
+  if (breakpointLg.matches) {
+    closeLists();
+    deactivateToggles();
 
-  var _loop = function _loop(i) {
-    toggles[i].classList.remove('main-footer__toggle--nojs');
-    toggles[i].addEventListener('click', function (evt) {
-      evt.preventDefault();
+    var _loop = function _loop(i) {
+      toggles[i].classList.remove('main-footer__toggle--no-js');
+      toggles[i].addEventListener('click', function (evt) {
+        evt.preventDefault();
 
-      if (toggles[i].classList.contains('main-footer__toggle--active')) {
-        toggleBlock(blocks[i], toggles[i]);
-      } else {
-        closeLists();
-        deactivateToggles();
-        var maxHeight = blocks[i].style.maxHeight;
-        blocks[i].style.maxHeight = maxHeight ? null : blocks[i].scrollHeight + 'px';
-        toggleBlock(blocks[i], toggles[i]);
-      }
+        if (toggles[i].classList.contains('main-footer__toggle--active')) {
+          toggleBlock(blocks[i], toggles[i]);
+        } else {
+          closeLists();
+          deactivateToggles();
+          var maxHeight = blocks[i].style.maxHeight;
+          blocks[i].style.maxHeight = maxHeight ? null : blocks[i].scrollHeight + 'px';
+          toggleBlock(blocks[i], toggles[i]);
+        }
+      });
+    };
+
+    for (var i = 0; i < toggles.length; i++) {
+      _loop(i);
+    }
+  } else {
+    blocks.forEach(function (element) {
+      element.style.maxHeight = null;
     });
-  };
-
-  for (var i = 0; i < toggles.length; i++) {
-    _loop(i);
   }
 };
 
@@ -203,10 +210,12 @@ var textInput = document.querySelector('.modal__content input[type="text"]');
 var telInput = document.querySelector('.modal__content input[type="tel"]');
 var message = document.querySelector('.modal__content textarea');
 var buttonSubmit = document.querySelector('.modal__button');
+var checkBox = document.querySelector('.modal__content input[type="checkbox"]');
+var label = document.querySelector('.modal__content label');
 var form = document.querySelector('.modal form');
 
 var initFormModalValidity = function initFormModalValidity() {
-  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["initValidity"])(textInput, telInput, message, buttonSubmit, form);
+  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["initValidity"])(textInput, telInput, message, buttonSubmit, checkBox, label, form);
 };
 
 
@@ -229,10 +238,12 @@ var textInput = document.querySelector('.feedback__form input[type="text"]');
 var telInput = document.querySelector('.feedback__form input[type="tel"]');
 var message = document.querySelector('.feedback__form textarea');
 var buttonSubmit = document.querySelector('.feedback__button');
+var checkBox = document.querySelector('.feedback__form input[type="checkbox"]');
+var label = document.querySelector('.feedback__field label');
 var form = document.querySelector('.feedback form');
 
 var initFormValidity = function initFormValidity() {
-  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["initValidity"])(textInput, telInput, message, buttonSubmit, form);
+  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["initValidity"])(textInput, telInput, message, buttonSubmit, checkBox, label, form);
 };
 
 
@@ -252,16 +263,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/modal */ "./js/utils/modal.js");
 
 var modal = document.querySelector('.modal');
-var modalBtns = document.querySelectorAll('.main-header__button');
-var textInput = document.querySelector('.modal__content input[type="text"]');
+var modalButtons = document.querySelectorAll('.main-header__button');
+var textInput = document.querySelector('.modal__content input[id="modal-user-name"]');
 
 var focusTextInput = function focusTextInput() {
   textInput.focus();
 };
 
 var initModals = function initModals() {
-  if (modal && modalBtns.length) {
-    Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modal, false, modalBtns, focusTextInput, false);
+  if (modal && modalButtons.length) {
+    Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modal, false, modalButtons, focusTextInput, false);
   }
 };
 
@@ -394,7 +405,7 @@ var storageText = '';
 var storageTel = '';
 var storageMessage = '';
 
-var initValidity = function initValidity(text, tel, message, btn, form) {
+var initValidity = function initValidity(name, tel, message, btn, checkbox, label, form) {
   try {
     storageText = localStorage.getItem('user-name');
   } catch (err) {
@@ -414,10 +425,10 @@ var initValidity = function initValidity(text, tel, message, btn, form) {
   }
 
   if (isStorageSupport) {
-    storageText = localStorage.getItem('user-name', text.value);
-    storageTel = localStorage.getItem('phone', text.value);
-    storageMessage = localStorage.getItem('message', text.value);
-    text.value = storageText;
+    storageText = localStorage.getItem('user-name', name.value);
+    storageTel = localStorage.getItem('phone', tel.value);
+    storageMessage = localStorage.getItem('message', message.value);
+    name.value = storageText;
     tel.value = storageTel;
     message.value = storageMessage;
   }
@@ -427,8 +438,8 @@ var initValidity = function initValidity(text, tel, message, btn, form) {
       var isLengthOfText = true;
       var isLengthOfTel = true;
 
-      if (text) {
-        var nameUser = text.value;
+      if (name) {
+        var nameUser = name.value;
         isLengthOfText = nameUser.length < MIN_TEXT_LENGTH;
       }
 
@@ -439,37 +450,30 @@ var initValidity = function initValidity(text, tel, message, btn, form) {
 
       if (isLengthOfText) {
         evt.preventDefault();
-        text.classList.add('js-invalid');
+        name.classList.add('js-invalid');
       } else if (isLengthOfTel) {
         evt.preventDefault();
         tel.classList.add('js-invalid');
       } else {
-        text.classList.remove('js-invalid');
+        name.classList.remove('js-invalid');
         tel.classList.remove('js-invalid');
       }
 
-      text.reportValidity();
+      name.reportValidity();
       tel.reportValidity();
     });
   }
 
   form.addEventListener('submit', function (evt) {
-    text.focus();
-
-    if (!text.value || !tel.value) {
+    if (!name.value || !tel.value || !checkbox.checked) {
       evt.preventDefault();
-      text.classList.remove('js-invalid');
-      tel.classList.remove('js-invalid');
-      text.offsetWidth = text.offsetWidth;
-      tel.offsetWidth = tel.offsetWidth;
-      text.classList.add('js-invalid');
+      name.classList.add('js-invalid');
       tel.classList.add('js-invalid');
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('user-name', text.value);
-        localStorage.setItem('phone', tel.value);
-        localStorage.setItem('message', message.value);
-      }
+      label.classList.add('js-unchecked');
+    } else if (isStorageSupport) {
+      localStorage.setItem('user-name', name.value);
+      localStorage.setItem('phone', tel.value);
+      localStorage.setItem('message', message.value);
     }
   });
 };

@@ -495,7 +495,7 @@
                 <p>Мы проконсультируем Вас бесплатно</p>
                 <ul class="feedback__list">
                   <li class="feedback__item">
-                    <!-- класс js-invalid делает border красным -->
+                    <!-- класс js-invalid делает border жёлтым -->
                     <input
                       id="user-name"
                       type="text"
@@ -507,7 +507,7 @@
                     />
                   </li>
                   <li class="feedback__item">
-                    <!-- класс js-invalid делает border красным -->
+                    <!-- класс js-invalid делает border жёлтым -->
                     <input
                       data-type="tel"
                       id="user-tel"
@@ -534,6 +534,7 @@
                   >
                     Задать вопрос
                   </button>
+                  <!-- класс js-unchecked делает color жёлтым -->
                   <input
                     id="user-checkbox"
                     type="checkbox"
@@ -594,7 +595,7 @@
             <div class="main-footer__menu">
               <h2>Разделы сайта</h2>
               <button
-                class="main-footer__toggle main-footer__toggle--nojs main-footer__toggle--active"
+                class="main-footer__toggle main-footer__toggle--no-js main-footer__toggle--active"
                 type="button"
                 aria-label="навигация для открытия выпадающего меню"
               >
@@ -647,7 +648,7 @@
             <div class="main-footer__menu">
               <h2>Наш офис</h2>
               <button
-                class="main-footer__toggle main-footer__toggle--nojs main-footer__toggle--active"
+                class="main-footer__toggle main-footer__toggle--no-js main-footer__toggle--active"
                 type="button"
                 aria-label="навигация для открытия выпадающего меню"
               >
@@ -735,11 +736,11 @@
               </p>
               <ul class="modal__list">
                 <li class="modal__item">
-                  <!-- класс js-invalid делает border красным -->
+                  <!-- класс js-invalid делает border жёлтым -->
                   <input
                     id="modal-user-name"
                     type="text"
-                    name="user-name"
+                    name="modal-user-name"
                     placeholder="Имя"
                     minlength="3"
                     aria-label="поле для ввода имени пользователя"
@@ -747,12 +748,12 @@
                   />
                 </li>
                 <li class="modal__item">
-                  <!-- класс js-invalid делает border красным -->
+                  <!-- класс js-invalid делает border жёлтым -->
                   <input
                     data-type="tel"
                     id="modal-user-tel"
                     type="tel"
-                    name="user-tel"
+                    name="modal-user-tel"
                     placeholder="Телефон"
                     aria-label="поле для ввода телефона пользователя"
                     required
@@ -774,6 +775,7 @@
                 Отправить
               </button>
               <div class="modal__field">
+                <!-- класс js-unchecked делает color жёлтым -->
                 <input
                   id="modal-user-checkbox"
                   type="checkbox"

@@ -228,7 +228,7 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition-duration: $time-transition;
+  transition: opacity $transition-base;
 
   &:hover,
   &:focus {
@@ -279,7 +279,7 @@
   line-height: 16px;
 
   opacity: 0.5;
-  transition-duration: $time-transition;
+  transition: opacity $transition-base;
 
   @include viewport--lg {
     display: none;

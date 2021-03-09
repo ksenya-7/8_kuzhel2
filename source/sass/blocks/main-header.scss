@@ -175,7 +175,7 @@
 
 .main-header__link {
   display: flex;
-  transition-duration: $time-transition;
+  transition: opacity $transition-base;
 
   &:hover,
   &:focus {
