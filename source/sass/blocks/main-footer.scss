@@ -330,12 +330,25 @@
 }
 
 .main-footer__right-section {
+  margin-top: 55px;
+  border-top: 1px solid $color-line;
+
+  @include viewport--lg {
+    margin-top: 35px;
+  }
+
+  @include viewport--md {
+    margin-top: 5px;
+  }
+}
+
+.main-footer__right-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   width: 1411px;
   min-height: 52px;
-  margin: 55px auto 0;
+  margin: 0 auto;
   padding: 14px 0 14px 0;
 
   font-size: 13px;
@@ -345,7 +358,6 @@
   color: $color-title;
   opacity: 0.5;
 
-  border-top: 1px solid $color-line;
 
   @include viewport--xxxl {
     width: 73.48%;
@@ -359,7 +371,6 @@
   @include viewport--lg {
     min-height: 69px;
     width: 100%;
-    margin-top: 35px;
     padding: 21px 3.3% 24px 3%;
     font-size: 13px;
   }
@@ -369,7 +380,6 @@
     justify-content: center;
 
     min-height: 123px;
-    margin-top: 5px;
     padding: 26px 3.3% 24px 3%;
   }
 }
