@@ -1,4 +1,4 @@
-const toggles = document.querySelectorAll('.main-footer__toggle.main-footer__toggle');
+const toggles = document.querySelectorAll('.main-footer__toggle');
 const blocks = document.querySelectorAll('.main-footer__hide-block');
 const breakpointLg = window.matchMedia('(max-width: 768px)');
 
@@ -24,22 +24,22 @@ const initAccordion = () => {
   if (breakpointLg.matches) {
     closeLists();
     deactivateToggles();
-    for (let i = 0; i < toggles.length; i++) {
-      toggles[i].classList.remove('main-footer__toggle--no-js');
+    toggles.forEach((btn, index) => {
+      btn.classList.remove('main-footer__toggle--no-js');
 
-      toggles[i].addEventListener('click', (evt) => {
+      btn.addEventListener('click', (evt) => {
         evt.preventDefault();
-        if (toggles[i].classList.contains('main-footer__toggle--active')) {
-          toggleBlock(blocks[i], toggles[i]);
+        if (btn.classList.contains('main-footer__toggle--active')) {
+          toggleBlock(blocks[index], btn);
         } else {
           closeLists();
           deactivateToggles();
-          const maxHeight = blocks[i].style.maxHeight;
-          blocks[i].style.maxHeight = (maxHeight) ? null : blocks[i].scrollHeight + 'px';
-          toggleBlock(blocks[i], toggles[i]);
+          const maxHeight = blocks[index].style.maxHeight;
+          blocks[index].style.maxHeight = (maxHeight) ? null : blocks[index].scrollHeight + 'px';
+          toggleBlock(blocks[index], btn);
         }
       });
-    }
+    });
   } else {
     blocks.forEach((element) => {
       element.style.maxHeight = null;

@@ -136,7 +136,7 @@ Object(_modules_form_modal__WEBPACK_IMPORTED_MODULE_7__["initFormModalValidity"]
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initAccordion", function() { return initAccordion; });
-var toggles = document.querySelectorAll('.main-footer__toggle.main-footer__toggle');
+var toggles = document.querySelectorAll('.main-footer__toggle');
 var blocks = document.querySelectorAll('.main-footer__hide-block');
 var breakpointLg = window.matchMedia('(max-width: 768px)');
 
@@ -162,27 +162,22 @@ var initAccordion = function initAccordion() {
   if (breakpointLg.matches) {
     closeLists();
     deactivateToggles();
-
-    var _loop = function _loop(i) {
-      toggles[i].classList.remove('main-footer__toggle--no-js');
-      toggles[i].addEventListener('click', function (evt) {
+    toggles.forEach(function (btn, index) {
+      btn.classList.remove('main-footer__toggle--no-js');
+      btn.addEventListener('click', function (evt) {
         evt.preventDefault();
 
-        if (toggles[i].classList.contains('main-footer__toggle--active')) {
-          toggleBlock(blocks[i], toggles[i]);
+        if (btn.classList.contains('main-footer__toggle--active')) {
+          toggleBlock(blocks[index], btn);
         } else {
           closeLists();
           deactivateToggles();
-          var maxHeight = blocks[i].style.maxHeight;
-          blocks[i].style.maxHeight = maxHeight ? null : blocks[i].scrollHeight + 'px';
-          toggleBlock(blocks[i], toggles[i]);
+          var maxHeight = blocks[index].style.maxHeight;
+          blocks[index].style.maxHeight = maxHeight ? null : blocks[index].scrollHeight + 'px';
+          toggleBlock(blocks[index], btn);
         }
       });
-    };
-
-    for (var i = 0; i < toggles.length; i++) {
-      _loop(i);
-    }
+    });
   } else {
     blocks.forEach(function (element) {
       element.style.maxHeight = null;
