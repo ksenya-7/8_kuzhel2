@@ -9,7 +9,7 @@
   }
 
   @include viewport--xxl {
-    padding: 92px 11.2% 113px 12%;
+    padding: 92px 3.12% 113px 3.12%;
   }
 
   @include viewport--lg {
@@ -27,7 +27,9 @@
   margin: 0 auto;
 
   @include viewport--lg {
+    width: 100%;
     min-width: 591px;
+    margin: 0;
   }
 
   @include viewport--md {
@@ -46,18 +48,19 @@
   overflow: hidden;
 
   @include viewport--xl {
-    transform: translateX(-35%);
-  }
-
-  @include viewport--lg {
     display: none;
   }
 }
 
 .feedback__photo {
   z-index: 5;
-  width: 511px;
+  max-width: 511px;
   margin-top: 69px;
+
+  @include viewport--xxl {
+    max-width: 35%;
+    flex-shrink: 2;
+  }
 
   @include viewport--lg {
     display: none;
@@ -70,7 +73,7 @@
   z-index: 5;
 
   @include viewport--xxl {
-    margin-left: 9.5%;
+    margin-left: 5%;
     width: 47.7%;
   }
 
@@ -79,13 +82,23 @@
     margin-left: 4px;
   }
 
-  @include viewport--lg {
+  @include viewport--md {
     margin-left: 0;
   }
 }
 
 .feedback__form {
-  width: 100%;
+  flex-shrink: 0;
+  width: 570px;
+
+  @include viewport--lg {
+    width: 100%;
+    min-width: 591px;
+  }
+
+  @include viewport--md {
+    min-width: 290px;
+  }
 }
 
 .feedback__form h3 {
@@ -279,12 +292,6 @@
   line-height: 16px;
   color: $color-fonbasic8;
 
-  @include viewport--xl {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
   @include viewport--lg {
     width: 40.35%;
     margin-left: 41px;
@@ -322,10 +329,6 @@
 
   @include viewport--xxxl {
     width: 46%;
-  }
-
-  @include viewport--xl {
-    width: 100%;
   }
 
   @include viewport--lg {

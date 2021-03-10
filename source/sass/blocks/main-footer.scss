@@ -51,7 +51,7 @@
   @include viewport--lg {
     flex-wrap: wrap;
     width: 93.8%;
-    margin: 17px 3% 25px 3.1%;
+    margin: 17px 3% 0 3.1%;
   }
 
   @include viewport--md {
@@ -147,6 +147,7 @@
     max-width: 243px;
     margin-top: 61px;
     margin-left: 0;
+    padding: 0 0 25px 0;
   }
 
   @include viewport--md {
@@ -239,6 +240,7 @@
   @include viewport--lg {
     min-width: 344px;
     margin-top: 61px;
+    padding: 0 0 25px 0;
   }
 
   @include viewport--md {

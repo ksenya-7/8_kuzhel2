@@ -259,7 +259,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var modal = document.querySelector('.modal');
 var modalButtons = document.querySelectorAll('.main-header__button');
-var textInput = document.querySelector('.modal__content input[id="modal-user-name"]');
+var textInput = document.querySelector('.modal__content input[type="text"]');
 
 var focusTextInput = function focusTextInput() {
   textInput.focus();
