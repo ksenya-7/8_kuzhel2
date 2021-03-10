@@ -348,7 +348,9 @@ template {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  min-height: calc(100 * var(--vh, 1vh)); }
+  min-height: calc(100 * var(--vh, 1vh));
+  min-width: 320px;
+  overflow: hidden; }
   .container .header,
   .container .footer {
     -ms-flex-negative: 0;
@@ -408,7 +410,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 a {
-  color: rgba(27, 45, 55, 0.5);
+  color: white;
   text-decoration: none; }
 
 img,
@@ -807,7 +809,7 @@ button,
   position: relative;
   margin: 0;
   max-width: 683px;
-  margin-top: 30px;
+  margin-top: 27px;
   margin-left: 98px;
   font-size: 22px;
   line-height: 34px; }
@@ -820,6 +822,7 @@ button,
   @media (max-width: 1023px) {
     .intro__block p {
       max-width: 356px;
+      margin-top: 30px;
       margin-left: 51px;
       font-size: 18px;
       line-height: 28px; } }
@@ -1038,7 +1041,7 @@ button,
       min-height: 232px;
       margin-right: 4.1%;
       margin-bottom: 30px;
-      padding: 24px 20px 24px 27px; } }
+      padding: 24px 19px 24px 27px; } }
   @media (max-width: 767px) {
     .features__item {
       width: 100%;
@@ -1087,7 +1090,7 @@ button,
 
 .features__item h3 {
   margin: 0;
-  margin-top: 17px;
+  margin-top: 10px;
   font-family: "Roboto Condensed", "Verdana", sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -1095,9 +1098,10 @@ button,
   color: #00b2ff; }
   @media (max-width: 1023px) {
     .features__item h3 {
-      margin-top: 7px; } }
+      margin-top: 2px; } }
   @media (max-width: 767px) {
     .features__item h3 {
+      margin-top: 7px;
       font-size: 20px;
       line-height: 28px; } }
 
@@ -1182,7 +1186,7 @@ button,
     .about-company {
       width: 93.5%;
       min-height: 349px;
-      margin: 23px 3% 0 3%; } }
+      margin: 28px 3% 0 3%; } }
   @media (max-width: 767px) {
     .about-company {
       width: 90%;
@@ -1462,9 +1466,6 @@ button,
   background-color: #00b2ff; }
   @media (max-width: 1799px) {
     .feedback {
-      padding: 92px 19.53% 113px 18.23%; } }
-  @media (max-width: 1799px) {
-    .feedback {
       padding: 92px 3.12% 113px 3.12%; } }
   @media (max-width: 1023px) {
     .feedback {
@@ -1526,9 +1527,6 @@ button,
   @media (max-width: 1023px) {
     .feedback form {
       width: 100%;
-      margin-left: 4px; } }
-  @media (max-width: 767px) {
-    .feedback form {
       margin-left: 0; } }
 
 .feedback__form {
@@ -1804,7 +1802,6 @@ label.js-unchecked {
     .main-footer__wrapper {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      width: 93.8%;
       margin: 17px 3% 0 3.1%; } }
   @media (max-width: 767px) {
     .main-footer__wrapper {
@@ -1949,8 +1946,7 @@ label.js-unchecked {
   padding: 0;
   font-size: 15px;
   line-height: 25px;
-  color: #203c42;
-  opacity: 0.5; }
+  color: #203c42; }
   @media (max-width: 1499px) {
     .main-footer__site-list {
       display: -webkit-box;
@@ -1969,6 +1965,7 @@ label.js-unchecked {
   min-width: 243px; }
 
 .main-footer__site-item a {
+  color: rgba(27, 45, 55, 0.5);
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
   .main-footer__site-item a:hover, .main-footer__site-item a:focus {
@@ -2067,8 +2064,7 @@ label.js-unchecked {
   padding: 0;
   font-size: 15px;
   line-height: 25px;
-  color: #203c42;
-  opacity: 0.5;
+  color: rgba(27, 45, 55, 0.5);
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
   .main-footer__address-block a:hover, .main-footer__address-block a:focus {
@@ -2103,8 +2099,7 @@ label.js-unchecked {
   line-height: 24px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #203c42;
-  opacity: 0.5; }
+  color: #203c42; }
   @media (max-width: 1799px) {
     .main-footer__right-wrapper {
       width: 73.48%; } }
@@ -2136,7 +2131,8 @@ label.js-unchecked {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-width: 457px; }
+  min-width: 457px;
+  color: rgba(27, 45, 55, 0.5); }
   @media (max-width: 1023px) {
     .main-footer__block-right {
       display: none; } }
@@ -2148,6 +2144,7 @@ label.js-unchecked {
       margin-left: 0; } }
 
 .main-footer__right-section a {
+  color: rgba(27, 45, 55, 0.5);
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
   .main-footer__right-section a:hover, .main-footer__right-section a:focus {

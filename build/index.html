@@ -756,6 +756,7 @@
               class="modal__close-btn"
               type="button"
               aria-label="закрыть окно"
+              tabindex="6"
             >
               <svg width="17" height="17" viewBox="0 0 17 17">
                 <use xlink:href="#modal-close"></use>
@@ -776,6 +777,7 @@
                     name="modal-user-name"
                     placeholder="Имя"
                     minlength="1"
+                    tabindex="1"
                     aria-label="поле для ввода имени пользователя"
                     required
                   />
@@ -788,6 +790,7 @@
                     type="tel"
                     name="modal-user-tel"
                     placeholder="Телефон"
+                    tabindex="2"
                     aria-label="поле для ввода телефона пользователя"
                     required
                   />
@@ -798,12 +801,14 @@
                 rows="4"
                 placeholder="Ваш вопрос"
                 maxlength="300"
+                tabindex="3"
                 contenteditable="true"
                 aria-label="поле для вопроса"
               ></textarea>
               <button
                 class="btn modal__button"
                 type="submit"
+                tabindex="4"
                 aria-label="отправить вопрос"
               >
                 Отправить
@@ -814,6 +819,7 @@
                   id="modal-user-checkbox"
                   type="checkbox"
                   name="user-checkbox"
+                  tabindex="5"
                   checked
                 />
                 <label for="modal-user-checkbox"

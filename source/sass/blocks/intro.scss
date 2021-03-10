@@ -8,7 +8,7 @@
   margin: 173px auto auto auto;
   padding-bottom: 70px;
 
-  @include viewport--xxxl {
+  @include viewport--xxl {
     width: 77.81%;
     margin: 173px 9.22% auto 12.97%;
   }
@@ -93,7 +93,7 @@
   position: relative;
   margin: 0;
   max-width: 683px;
-  margin-top: 30px;
+  margin-top: 27px;
   margin-left: 98px;
   font-size: 22px;
   line-height: 34px;
@@ -108,6 +108,7 @@
 
   @include viewport--lg {
     max-width: 356px;
+    margin-top: 30px;
     margin-left: 51px;
 
     font-size: 18px;

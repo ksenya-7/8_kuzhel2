@@ -6,7 +6,7 @@ let storageText = '';
 let storageTel = '';
 let storageMessage = '';
 
-const initValidity = (name, tel, message, btn, checkbox, label, form, btnClose) => {
+const initValidity = (name, tel, message, btn, checkbox, label, form) => {
   try {
     storageText = localStorage.getItem('user-name');
   } catch (err) {
@@ -66,8 +66,6 @@ const initValidity = (name, tel, message, btn, checkbox, label, form, btnClose) 
   }
 
   form.addEventListener('submit', (evt) => {
-    btnClose.focus();
-
     if (!name.value || !tel.value || !checkbox.checked) {
       evt.preventDefault();
       name.classList.add('js-invalid');

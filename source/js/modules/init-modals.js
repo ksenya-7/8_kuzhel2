@@ -5,7 +5,9 @@ const modalButtons = document.querySelectorAll('.main-header__button');
 const textInput = document.querySelector('.modal__content input[type="text"]');
 
 const focusTextInput = () => {
-  textInput.focus();
+  setTimeout(() => {
+    textInput.focus();
+  }, 100);
 };
 
 const initModals = () => {

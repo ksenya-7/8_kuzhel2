@@ -6,7 +6,7 @@
   margin: 77px auto 0 auto;
   padding-left: 37px;
 
-  @include viewport--xxxl {
+  @include viewport--xxl {
     width: 62.19%;
   }
 
@@ -18,7 +18,7 @@
   @include viewport--lg {
     width: 93.5%;
     min-height: 349px;
-    margin: 23px 3% 0 3%;
+    margin: 28px 3% 0 3%;
   }
 
   @include viewport--md {

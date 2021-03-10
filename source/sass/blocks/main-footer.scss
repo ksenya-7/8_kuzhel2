@@ -38,7 +38,7 @@
   width: 1411px;
   margin: 65px auto 0 auto;
 
-  @include viewport--xxxl {
+  @include viewport--xxl {
     width: 73.5%;
     margin: 65px 13.33% 0 13.18%;
   }
@@ -50,7 +50,6 @@
 
   @include viewport--lg {
     flex-wrap: wrap;
-    width: 93.8%;
     margin: 17px 3% 0 3.1%;
   }
 
@@ -140,7 +139,7 @@
   display: flex;
   flex-direction: column;
 
-  @include viewport--xxxl {
+  @include viewport--xxl {
     margin-left: 14.6%;
   }
 
@@ -195,7 +194,6 @@
   font-size: 15px;
   line-height: 25px;
   color: $color-title;
-  opacity: 0.5;
 
   @include viewport--xl {
     display: flex;
@@ -213,6 +211,7 @@
 }
 
 .main-footer__site-item a {
+  color: $color-text;
   transition: opacity $transition-base;
 
   &:hover,
@@ -318,8 +317,8 @@
 
   font-size: 15px;
   line-height: 25px;
-  color: $color-title;
-  opacity: 0.5;
+  color: $color-text;
+
   transition: opacity $transition-base;
 
   &:hover,
@@ -357,10 +356,8 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $color-title;
-  opacity: 0.5;
 
-
-  @include viewport--xxxl {
+  @include viewport--xxl {
     width: 73.48%;
   }
 
@@ -390,6 +387,8 @@
   flex-wrap: wrap;
   min-width: 457px;
 
+  color: $color-text;
+
   @include viewport--lg {
     display: none;
   }
@@ -404,6 +403,7 @@
 }
 
 .main-footer__right-section a {
+  color: $color-text;
   transition: opacity $transition-base;
 
   &:hover,
@@ -417,7 +417,7 @@
 .main-footer__conditions {
   margin-left: 142px;
 
-  @include viewport--xxxl {
+  @include viewport--xxl {
     margin-left: 10.25%;
   }
 

@@ -6,7 +6,7 @@
   padding: 89px 19.53% 109px 19.53%;
   background-color: $color-background;
 
-  @include viewport--xxxl {
+  @include viewport--xxl {
     padding: 89px 19.53% 109px 19.53%;
   }
 
@@ -28,19 +28,9 @@
   max-width: 1170px;
   margin: 0 auto;
 
-  @include viewport--xxxl {
+  @include viewport--xxl {
     margin: 0;
   }
-
-  // @include viewport--xxl {
-  //   width: 90%;
-  //   // margin: 0;
-  // }
-
-  // @include viewport--lg {
-  //   width: 100%;
-  //   margin: 0;
-  // }
 }
 
 .goods h2 {
@@ -96,7 +86,7 @@
   padding: 53px 44px;
   margin-bottom: 20px;
 
-  @include viewport--xxxl {
+  @include viewport--xxl {
     width: 31.62%;
     max-width: 31.62%;
   }
@@ -113,7 +103,6 @@
   @include viewport--md {
     margin-bottom: 31px;
     padding: 20px 35px;
-    // max-width: 100%;
   }
 }
 

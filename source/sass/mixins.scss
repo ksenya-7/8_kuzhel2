@@ -1,9 +1,3 @@
-@mixin viewport--xxxl {
-  @media (max-width: $viewport--xxl - 1) {
-    @content;
-  }
-}
-
 @mixin viewport--xxl {
   @media (max-width: $viewport--xxl - 1) {
     @content;

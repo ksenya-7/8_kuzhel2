@@ -4,9 +4,6 @@
   padding: 92px 375px 113px 350px;
   background-color: $color-stroke;
 
-  @include viewport--xxxl {
-    padding: 92px 19.53% 113px 18.23%;
-  }
 
   @include viewport--xxl {
     padding: 92px 3.12% 113px 3.12%;
@@ -79,10 +76,6 @@
 
   @include viewport--lg {
     width: 100%;
-    margin-left: 4px;
-  }
-
-  @include viewport--md {
     margin-left: 0;
   }
 }
@@ -327,7 +320,7 @@
   color: $color-fonbasic;
   border: 1px solid $color-fonbasic;
 
-  @include viewport--xxxl {
+  @include viewport--xxl {
     width: 46%;
   }
 

@@ -205,13 +205,12 @@ var textInput = document.querySelector('.modal__content input[type="text"]');
 var telInput = document.querySelector('.modal__content input[type="tel"]');
 var message = document.querySelector('.modal__content textarea');
 var buttonSubmit = document.querySelector('.modal__button');
-var buttonClose = document.querySelectorAll('.modal__close-btn');
 var checkBox = document.querySelector('.modal__content input[type="checkbox"]');
 var label = document.querySelector('.modal__content label');
 var form = document.querySelector('.modal form');
 
 var initFormModalValidity = function initFormModalValidity() {
-  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["initValidity"])(textInput, telInput, message, buttonSubmit, checkBox, label, form, buttonClose);
+  Object(_validity__WEBPACK_IMPORTED_MODULE_0__["initValidity"])(textInput, telInput, message, buttonSubmit, checkBox, label, form);
 };
 
 
@@ -263,7 +262,9 @@ var modalButtons = document.querySelectorAll('.main-header__button');
 var textInput = document.querySelector('.modal__content input[type="text"]');
 
 var focusTextInput = function focusTextInput() {
-  textInput.focus();
+  setTimeout(function () {
+    textInput.focus();
+  }, 100);
 };
 
 var initModals = function initModals() {
@@ -401,7 +402,7 @@ var storageText = '';
 var storageTel = '';
 var storageMessage = '';
 
-var initValidity = function initValidity(name, tel, message, btn, checkbox, label, form, btnClose) {
+var initValidity = function initValidity(name, tel, message, btn, checkbox, label, form) {
   try {
     storageText = localStorage.getItem('user-name');
   } catch (err) {
@@ -461,8 +462,6 @@ var initValidity = function initValidity(name, tel, message, btn, checkbox, labe
   }
 
   form.addEventListener('submit', function (evt) {
-    btnClose.focus();
-
     if (!name.value || !tel.value || !checkbox.checked) {
       evt.preventDefault();
       name.classList.add('js-invalid');
