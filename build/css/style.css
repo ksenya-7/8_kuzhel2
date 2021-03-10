@@ -348,7 +348,6 @@ template {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  min-height: calc(100 * var(--vh, 1vh));
   min-width: 320px;
   overflow: hidden; }
   .container .header,
@@ -2070,7 +2069,7 @@ label.js-unchecked {
   .main-footer__address-block a:hover, .main-footer__address-block a:focus {
     outline: none;
     cursor: pointer;
-    opacity: 0.25; }
+    opacity: 0.5; }
 
 .main-footer__right-section {
   margin-top: 60px;
