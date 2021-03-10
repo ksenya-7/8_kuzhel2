@@ -19,7 +19,7 @@
 
   @include viewport--md {
     width: 290px;
-    padding-top: 38px;
+    padding-top: 36px;
   }
 }
 
@@ -86,7 +86,6 @@
     outline: none;
     color: $color-fonbasic;
     background-color: $color-stroke;
-    cursor: pointer;
 
     svg,
     h3 {
@@ -139,7 +138,6 @@
   }
 
   @include viewport--md {
-    margin-top: 13px;
     font-size: 20px;
     line-height: 28px;
   }

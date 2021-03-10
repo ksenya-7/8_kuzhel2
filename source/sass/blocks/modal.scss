@@ -87,6 +87,17 @@
     outline: none;
     opacity: 0.5;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -10px;
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .modal__content h3 {

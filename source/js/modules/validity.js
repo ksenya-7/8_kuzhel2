@@ -1,4 +1,4 @@
-const MIN_TEXT_LENGTH = 3;
+const MIN_TEXT_LENGTH = 1;
 const TEL_LENGTH = 17;
 
 let isStorageSupport = true;
@@ -6,7 +6,7 @@ let storageText = '';
 let storageTel = '';
 let storageMessage = '';
 
-const initValidity = (name, tel, message, btn, checkbox, label, form) => {
+const initValidity = (name, tel, message, btn, checkbox, label, form, btnClose) => {
   try {
     storageText = localStorage.getItem('user-name');
   } catch (err) {
@@ -65,7 +65,9 @@ const initValidity = (name, tel, message, btn, checkbox, label, form) => {
     });
   }
 
-  form.addEventListener('submit', function (evt) {
+  form.addEventListener('submit', (evt) => {
+    btnClose.focus();
+
     if (!name.value || !tel.value || !checkbox.checked) {
       evt.preventDefault();
       name.classList.add('js-invalid');

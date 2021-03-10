@@ -184,6 +184,8 @@
   @include viewport--md {
     display: flex;
     justify-content: flex-end;
+
+    margin-top: -5px;
   }
 }
 
@@ -218,6 +220,7 @@
   margin-left: 98px;
   padding: 12px 28px 12px;
 
+  color: $color-fonbasic;
   background: $color-stroke;
   border-radius: 5px;
 

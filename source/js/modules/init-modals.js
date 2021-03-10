@@ -10,7 +10,7 @@ const focusTextInput = () => {
 
 const initModals = () => {
   if (modal && modalButtons.length) {
-    setupModal(modal, false, modalButtons, focusTextInput, false);
+    setupModal(modal, false, modalButtons, focusTextInput, false, false);
   }
 };
 
