@@ -44,6 +44,10 @@
   width: 100%;
   min-height: 100%;
   padding: 60px 40px;
+
+  &--page-modal {
+    margin-top: 100px;
+  }
 }
 
 .modal__overlay {

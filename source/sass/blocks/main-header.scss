@@ -8,6 +8,10 @@
   min-height: 878px;
   background-color: $color-section;
 
+  &--modal-page {
+    min-height: 120px;
+  }
+
   @include viewport--lg {
     min-height: 686px;
   }

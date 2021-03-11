@@ -36,9 +36,57 @@
     <div class="container">
       <div style="display: none">@@include("build/img/sprite_auto.svg")</div>
       <h1 class="visually-hidden">Попап интернет-магазина Smart Device</h1>
+
       <div class="modal modal--active">
         <h2 class="visually-hidden">Попап</h2>
-        <div class="modal__wrapper">
+        <header class="main-header main-header--modal-page">
+          <div class="main-header__top">
+            <a
+              href="index.html"
+              class="main-header__logo main-header__logo--desktop"
+              aria-label="переход на главную страницу"
+            >
+              <svg width="202" height="52" viewBox="0 0 202 52">
+                <use xlink:href="#logo-desktop"></use>
+              </svg>
+            </a>
+            <ul class="main-header__list">
+              <li class="main-header__item">
+                <a
+                  href="mailto:info@sd.ru"
+                  class="main-header__link"
+                  aria-label="электронная почта компании"
+                >
+                  <span class="main-header__icon main-header__icon--mail">
+                    <svg width="19" height="14" viewBox="0 0 19 14">
+                      <use xlink:href="#icon_envelope"></use>
+                    </svg>
+                  </span>
+                  <span class="main-header__text main-header__text--mail"
+                    >info@sd.ru</span
+                  >
+                </a>
+              </li>
+              <li class="main-header__item">
+                <a
+                  href="tel:+74950005252"
+                  class="main-header__link"
+                  aria-label="телефон компании"
+                >
+                  <span class="main-header__icon main-header__icon--phone">
+                    <svg width="17" height="17" viewBox="0 0 18 18">
+                      <use xlink:href="#icon_phone-call"></use>
+                    </svg>
+                  </span>
+                  <span class="main-header__text main-header__text--phone"
+                    >+7 (495) 000 52 52</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <div class="modal__wrapper modal__wrapper--modal-page">
           <div class="modal__overlay"></div>
           <div class="modal__content">
             <form action="https://echo.htmlacademy.ru" method="get">

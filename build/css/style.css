@@ -518,6 +518,8 @@ button,
   width: 100%;
   min-height: 878px;
   background-color: #1b2d37; }
+  .main-header--modal-page {
+    min-height: 120px; }
   @media (max-width: 1023px) {
     .main-header {
       min-height: 686px; } }
@@ -2287,6 +2289,8 @@ label.js-unchecked {
   width: 100%;
   min-height: 100%;
   padding: 60px 40px; }
+  .modal__wrapper--page-modal {
+    margin-top: 100px; }
 
 .modal__overlay {
   position: absolute;
